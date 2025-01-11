@@ -11,7 +11,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const Navbar = () => {
   const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -74,7 +73,6 @@ const Navbar = () => {
                             ? "text-violet-700"
                             : "text-gray-600 hover:text-violet-700"
                         }`}
-                        onClick={() => setIsOpen(false)}
                       >
                         {item.name}
                       </Link>
