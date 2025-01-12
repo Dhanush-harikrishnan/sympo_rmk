@@ -21,39 +21,37 @@ const Navbar = () => {
   return (
     <nav className="bg-gradient-to-r from-gray-100 to-white shadow-sm">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
-          <div className="flex">
-            <div className="flex-shrink-0 flex items-center">
-              <Link href="/" className="flex items-center">
-                <Image
-                  src="/logo.gif"
-                  alt="CSBS Logo"
-                  width={40}
-                  height={40}
-                  className="mr-2"
-                />
-                <span className="text-xl font-bold text-violet-700">RMK Engineering College</span>
-              </Link>
-            </div>
-            <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
-              {navItems.map((item) => (
-                <Link
-                  key={item.name}
-                  href={item.path}
-                  className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
-                    pathname === item.path
-                      ? "border-violet-700 text-violet-700"
-                      : "border-transparent text-gray-600 hover:text-violet-700 hover:border-violet-300"
-                  }`}
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </div>
-          </div>
+        <div className="flex justify-between h-16 items-center">
           <div className="flex items-center">
+            <Link href="/" className="flex items-center">
+              <Image
+                src="/logo.gif"
+                alt="CSBS Logo"
+                width={40}
+                height={40}
+                className="mr-2"
+              />
+              <span className="text-xl font-bold text-violet-700 whitespace-nowrap">RMK Engineering College</span>
+            </Link>
+          </div>
+          <div className="hidden sm:flex sm:items-center sm:space-x-8">
+            {navItems.map((item) => (
+              <Link
+                key={item.name}
+                href={item.path}
+                className={`inline-flex items-center px-1 pt-1 border-b-2 text-sm font-medium ${
+                  pathname === item.path
+                    ? "border-violet-700 text-violet-700"
+                    : "border-transparent text-gray-600 hover:text-violet-700 hover:border-violet-300"
+                }`}
+              >
+                {item.name}
+              </Link>
+            ))}
+          </div>
+          <div className="flex items-center space-x-4">
             <ModeToggle />
-            <div className="sm:hidden ml-4">
+            <div className="sm:hidden">
               <Sheet>
                 <SheetTrigger asChild>
                   <Button variant="outline" size="icon" className="text-violet-700">
