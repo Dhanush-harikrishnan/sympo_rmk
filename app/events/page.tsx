@@ -20,7 +20,16 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 }
 
-const events = [
+interface Event {
+  title: string
+  description: string
+  image: string
+  coordinators: string
+  details: string
+  registrationLink: string
+}
+
+const events: Event[] = [
   {
     title: "Paper Presentation",
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
@@ -72,7 +81,7 @@ const events = [
 ]
 
 export default function Events() {
-  const [selectedEvent, setSelectedEvent] = useState(null)
+  const [selectedEvent, setSelectedEvent] = useState<Event | null>(null)
 
   return (
     <div className="flex flex-col min-h-screen py-20">
