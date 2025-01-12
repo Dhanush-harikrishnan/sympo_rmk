@@ -2,6 +2,7 @@
 
 import { useState } from "react"
 import Image from "next/image"
+import Link from "next/link"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
@@ -122,7 +123,9 @@ export default function Events() {
                       </DialogHeader>
                     </DialogContent>
                   </Dialog>
-                  <Button as="a" href={event.registrationLink} target="_blank">Register</Button>
+                  <Link href={event.registrationLink} target="_blank">
+                    <Button className="bg-violet-700 hover:bg-violet-800 text-white">Register</Button>
+                  </Link>
                 </CardFooter>
               </Card>
             </motion.div>
