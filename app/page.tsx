@@ -87,47 +87,60 @@ const events = [
 
 export default function Home() {
   return (
-    <div className="flex flex-col min-h-screen">
+    <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto">
       <motion.section
-        className="bg-gradient-to-r from-gray-100 to-white text-gray-800 py-12 sm:py-20"
+        className="relative bg-gradient-to-b from-violet-950 via-violet-900 to-violet-800 text-white py-20 overflow-hidden"
         initial="initial"
         animate="animate"
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
-          <div className="flex flex-col md:flex-row items-center justify-between">
-            <motion.div className="md:w-1/2 mb-8 md:mb-0" variants={fadeInLeft}>
-              <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-violet-700">CSBS Symposium 2025</h1>
-              <p className="text-lg sm:text-xl mb-8 text-gray-600">Empowering Innovation and Business Acumen</p>
-              <Button asChild className="bg-violet-700 hover:bg-violet-800 text-white">
+        <div className="absolute inset-0">
+          <div className="absolute top-0 -left-4 w-72 h-72 bg-violet-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob" />
+          <div className="absolute top-0 -right-4 w-72 h-72 bg-purple-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-2000" />
+          <div className="absolute -bottom-8 left-20 w-72 h-72 bg-indigo-500 rounded-full mix-blend-multiply filter blur-xl opacity-20 animate-blob animation-delay-4000" />
+          <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
+        </div>
+
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
+            <motion.div className="w-full md:w-1/2 max-w-2xl" variants={fadeInLeft}>
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-violet-200 bg-clip-text text-transparent">
+                CSBS Symposium 2025
+              </h1>
+              <p className="text-lg sm:text-xl mb-8 text-violet-200">Empowering Innovation and Business Acumen</p>
+              <Button asChild className="bg-white hover:bg-violet-100 text-violet-900 font-semibold transition-all duration-300 hover:scale-105">
                 <Link href="/events">Explore Events</Link>
               </Button>
             </motion.div>
-            <motion.div className="md:w-1/2 flex justify-center" variants={fadeInRight}>
-              <Image
-                src="/Banner.jpg"
-                alt="Department Logo"
-                width={400}
-                height={300}
-                className="rounded-full shadow-lg"
-              />
+            <motion.div className="w-full md:w-1/2 flex justify-center" variants={fadeInRight}>
+              <div className="relative group">
+                <div className="absolute -inset-4 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 rounded-lg opacity-30 blur-2xl group-hover:opacity-40 transition-opacity duration-300" />
+                <Image
+                  src="/Banner.jpg"
+                  alt="Symposium Banner"
+                  width={500}
+                  height={375}
+                  className="rounded-lg shadow-lg object-cover w-full max-w-[500px] relative z-10"
+                  priority
+                />
+              </div>
             </motion.div>
           </div>
         </div>
       </motion.section>
 
       <motion.section
-        className="py-8"
+        className="w-full py-8 relative z-20 -mt-8"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
-          <Alert>
-            <CalendarDays className="h-4 w-4" />
-            <AlertTitle>Registration Deadline</AlertTitle>
-            <AlertDescription>
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <Alert className="max-w-3xl mx-auto mt-16 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
+            <CalendarDays className="h-4 w-4 text-violet-700 dark:text-violet-300" />
+            <AlertTitle className="text-violet-800 dark:text-violet-200">Registration Deadline</AlertTitle>
+            <AlertDescription className="text-gray-600 dark:text-gray-300">
               Online registration closes on March 25, 2025. On-spot registration will be available.
             </AlertDescription>
           </Alert>
@@ -135,31 +148,33 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="py-12 sm:py-20"
+        className="w-full py-12 sm:py-20"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-2 gap-8 items-center">
-            <div>
-              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-700">About the Symposium</h2>
-              <p className="text-lg sm:text-xl mb-4 text-gray-700">Where Technology Meets Business Innovation</p>
-              <p className="text-gray-600 mb-6">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12 items-center">
+            <div className="max-w-2xl">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-800 dark:text-violet-200">About the Symposium</h2>
+              <p className="text-lg sm:text-xl mb-4 text-violet-700 dark:text-violet-300">Where Technology Meets Business Innovation</p>
+              <p className="text-gray-600 dark:text-gray-300 mb-6">
                 Join us for an exciting journey where cutting-edge technology intersects with innovative business strategies. 
                 The CSBS Symposium 2025 brings together brilliant minds to explore the future of computer science and business systems.
               </p>
-              <Button asChild className="bg-violet-700 hover:bg-violet-800 text-white">
+              <Button asChild className="bg-violet-700 hover:bg-violet-800 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300">
                 <Link href="/about">Learn More</Link>
               </Button>
             </div>
-            <div className="relative h-[300px] sm:h-[400px] rounded-lg overflow-hidden order-first md:order-last">
+            <div className="relative h-[300px] sm:h-[400px] rounded-lg overflow-hidden order-first md:order-last group">
+              <div className="absolute -inset-4 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 rounded-lg opacity-30 blur-2xl group-hover:opacity-40 transition-opacity duration-300" />
               <Image
                 src="/img1.jpg"
                 alt="Symposium"
-                layout="fill"
-                objectFit="cover"
+                fill
+                className="object-cover rounded-lg relative z-10"
+                sizes="(max-width: 768px) 100vw, 50vw"
               />
             </div>
           </div>
@@ -167,43 +182,45 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="py-12 sm:py-20 bg-gray-100"
+        className="w-full py-12 sm:py-20 bg-gradient-to-b from-violet-50 to-white dark:from-violet-950 dark:to-gray-900"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-violet-700">Featured Events</h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {events.map((event, index) => (
-              <motion.div key={index} variants={fadeInUp}>
+              <motion.div key={index} variants={fadeInUp} className="h-full">
                 <Card className="h-full flex flex-col">
                   <CardHeader>
                     <CardTitle className="text-violet-700">{event.title}</CardTitle>
                     <CardDescription>Coordinators: {event.coordinators}</CardDescription>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <Image
-                      src={event.image}
-                      alt={event.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 object-cover mb-4 rounded-md"
-                    />
+                    <div className="aspect-video relative mb-4 w-full">
+                      <Image
+                        src={event.image}
+                        alt={event.title}
+                        fill
+                        className="object-cover rounded-md"
+                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                      />
+                    </div>
                     <p className="text-gray-600">{event.description}</p>
                   </CardContent>
                   <CardFooter className="flex justify-between mt-auto">
                     <Dialog>
                       <DialogTrigger asChild>
-                        <Button variant="outline" className="text-violet-700 border-violet-700 hover:bg-violet-50">View Details</Button>
+                        <Button variant="outline" className="text-violet-700 border-violet-700 hover:bg-violet-50">
+                          View Details
+                        </Button>
                       </DialogTrigger>
                       <DialogContent className="sm:max-w-[425px]">
                         <DialogHeader>
                           <DialogTitle>{event.title}</DialogTitle>
-                          <DialogDescription>
-                            {event.details}
-                          </DialogDescription>
+                          <DialogDescription>{event.details}</DialogDescription>
                         </DialogHeader>
                         <div className="mt-4">
                           <p className="text-sm text-gray-500">Coordinators: {event.coordinators}</p>
@@ -239,6 +256,103 @@ export default function Home() {
         </div>
       </motion.section>
 
+      <motion.section className="w-full py-12 sm:py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <h2 className="text-3xl font-bold mb-12 text-center text-violet-700">
+            Event Schedule
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4">Morning Session</h3>
+              <ul className="space-y-4">
+                <li className="flex justify-between">
+                  <span>8:30 AM - 9:30 AM</span>
+                  <span>Registration & Kit Distribution</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>9:30 AM - 10:00 AM</span>
+                  <span>Inauguration Ceremony</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>10:00 AM - 12:30 PM</span>
+                  <span>Technical Events - Round 1</span>
+                </li>
+              </ul>
+            </Card>
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4">Afternoon Session</h3>
+              <ul className="space-y-4">
+                <li className="flex justify-between">
+                  <span>1:30 PM - 3:30 PM</span>
+                  <span>Technical Events - Final Round</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>3:30 PM - 4:30 PM</span>
+                  <span>Prize Distribution</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>4:30 PM - 5:00 PM</span>
+                  <span>Valedictory Function</span>
+                </li>
+              </ul>
+            </Card>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section className="w-full py-12 sm:py-20 bg-gray-50">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <h2 className="text-3xl font-bold mb-12 text-center text-violet-700">
+            Prizes & Rewards
+          </h2>
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <Card className="text-center p-6">
+              <h3 className="text-xl font-semibold mb-4">First Prize</h3>
+              <p className="text-3xl font-bold text-violet-700 mb-4">₹10,000</p>
+              <p className="text-gray-600">Plus Certificate of Excellence</p>
+            </Card>
+            <Card className="text-center p-6">
+              <h3 className="text-xl font-semibold mb-4">Second Prize</h3>
+              <p className="text-3xl font-bold text-violet-700 mb-4">₹7,000</p>
+              <p className="text-gray-600">Plus Certificate of Merit</p>
+            </Card>
+            <Card className="text-center p-6">
+              <h3 className="text-xl font-semibold mb-4">Third Prize</h3>
+              <p className="text-3xl font-bold text-violet-700 mb-4">₹5,000</p>
+              <p className="text-gray-600">Plus Certificate of Achievement</p>
+            </Card>
+          </div>
+        </div>
+      </motion.section>
+
+      <motion.section className="w-full py-12 sm:py-20 bg-white">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <h2 className="text-3xl font-bold mb-12 text-center text-violet-700">
+            Important Guidelines
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8">
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4">Registration Guidelines</h3>
+              <ul className="space-y-3 list-disc pl-4">
+                <li>Registration fee: ₹300 per participant</li>
+                <li>Team size: Maximum 2 members per team</li>
+                <li>Bring college ID cards for verification</li>
+                <li>On-spot registration subject to availability</li>
+              </ul>
+            </Card>
+            <Card className="p-6">
+              <h3 className="text-xl font-semibold mb-4">General Rules</h3>
+              <ul className="space-y-3 list-disc pl-4">
+                <li>Participants must report 30 minutes before event</li>
+                <li>Decision of judges will be final</li>
+                <li>Certificates will be provided to all participants</li>
+                <li>Lunch and refreshments will be provided</li>
+              </ul>
+            </Card>
+          </div>
+        </div>
+      </motion.section>
+
       <motion.section
         className="py-12 sm:py-20"
         initial="initial"
@@ -253,18 +367,104 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="py-12 sm:py-20 bg-gray-100"
+        className="w-full py-12 sm:py-20 bg-gray-100"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto text-center px-4">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-violet-700">Contact Us</h2>
-          <p className="text-lg sm:text-xl mb-4 text-gray-700">Have questions about the symposium?</p>
+          <p className="text-lg sm:text-xl mb-8 text-gray-700">Have questions about the symposium?</p>
+          
+          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
+            {/* Student Coordinators */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
+              <div className="space-y-2 text-gray-600">
+                <p>Varshaa: +91 98765 43210</p>
+                <p>Harini P: +91 98765 43211</p>
+              </div>
+            </div>
+
+            {/* Faculty Coordinators */}
+            <div className="bg-white p-6 rounded-lg shadow-md">
+              <h3 className="text-lg font-semibold mb-4 text-violet-700">Faculty Coordinator</h3>
+              <div className="space-y-2 text-gray-600">
+                <p>Varun CM</p>
+                <p>Assistant Professor</p>
+              </div>
+            </div>
+
+            {/* Contact Information */}
+            <div className="bg-white p-6 rounded-lg shadow-md sm:col-span-2 lg:col-span-1">
+              <h3 className="text-lg font-semibold mb-4 text-violet-700">Contact Information</h3>
+              <div className="space-y-2 text-gray-600">
+                <p>Email: info@csbssymposium.com</p>
+                <p>Phone: +91 123 456 7890</p>
+              </div>
+            </div>
+          </div>
+
           <Button asChild className="bg-violet-700 hover:bg-violet-800 text-white">
             <Link href="/contact">Get in Touch</Link>
           </Button>
+        </div>
+      </motion.section>
+
+      <motion.section
+        className="w-full py-12 sm:py-20 bg-gray-50"
+        initial="initial"
+        whileInView="animate"
+        viewport={{ once: true }}
+        variants={fadeInUp}
+      >
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-violet-700">
+            Venue Location
+          </h2>
+          <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
+            <div className="flex flex-col justify-center">
+              <Card className="p-6">
+                <h3 className="text-xl font-semibold mb-4">RMK Engineering College</h3>
+                <p className="text-gray-600 mb-6">
+                  206, Taluk, Gummidipoondi, Kavaraipettai,<br />
+                  Tamil Nadu 601206
+                </p>
+                <div className="flex gap-4">
+                  <Button asChild className="bg-violet-700 hover:bg-violet-800">
+                    <Link 
+                      href="https://www.google.com/maps/dir/13.0678784,80.1964032/rmk+engineering+college+location/@13.2126142,80.0151986,11z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3a4d807de229f987:0x11cc13e2927bfabc!2m2!1d80.1413034!2d13.3566859?entry=ttu&g_ep=EgoyMDI1MDEwOC4wIKXMDSoASAFQAw%3D%3D"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      Get Directions
+                    </Link>
+                  </Button>
+                  <Button asChild variant="outline">
+                    <Link 
+                      href="tel:+914467906666"
+                    >
+                      Contact
+                    </Link>
+                  </Button>
+                </div>
+              </Card>
+            </div>
+            <div className="h-[300px] sm:h-[400px] rounded-lg overflow-hidden shadow-lg">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3882.874561175642!2d80.13912407464066!3d13.356685986555505!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a4d807de229f987%3A0x11cc13e2927bfabc!2sRMK%20Engineering%20College!5e0!3m2!1sen!2sin!4v1704718427387!5m2!1sen!2sin"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                className="rounded-lg"
+                title="RMK Engineering College Location"
+              />
+            </div>
+          </div>
         </div>
       </motion.section>
     </div>
