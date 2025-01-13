@@ -94,7 +94,7 @@ export default function Home() {
         animate="animate"
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-24">
+        <div className="container mx-auto px-4">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <motion.div className="md:w-1/2 mb-8 md:mb-0" variants={fadeInLeft}>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-violet-700">CSBS Symposium 2025</h1>
@@ -123,7 +123,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-24">
+        <div className="container mx-auto px-4">
           <Alert>
             <CalendarDays className="h-4 w-4" />
             <AlertTitle>Registration Deadline</AlertTitle>
@@ -141,7 +141,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-24">
+        <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-700">About the Symposium</h2>
@@ -173,7 +173,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-24">
+        <div className="container mx-auto px-4">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-violet-700">Featured Events</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => (
