@@ -1,6 +1,5 @@
 "use client"
 
-import { useState } from "react"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { ModeToggle } from "./mode-toggle"
@@ -11,7 +10,6 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet"
 
 const Navbar = () => {
   const pathname = usePathname()
-  const [isOpen, setIsOpen] = useState(false)
 
   const navItems = [
     { name: "Home", path: "/" },
@@ -73,7 +71,6 @@ const Navbar = () => {
                           ? "bg-violet-100 text-violet-700"
                           : "text-gray-600 hover:bg-violet-50 hover:text-violet-700"
                       }`}
-                      onClick={() => setIsOpen(false)}
                     >
                       {item.name}
                     </Link>
