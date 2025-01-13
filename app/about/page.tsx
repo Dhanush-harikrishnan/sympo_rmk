@@ -2,8 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Sparkles, Lightbulb, Users2, Target, Rocket, Trophy, ArrowRight, Globe2, Brain, Cpu } from 'lucide-react'
-import Image from "next/image"
+import { Sparkles, Globe2, Brain, Cpu, Trophy } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -147,8 +146,8 @@ export default function About() {
 
                 <div className="bg-gradient-to-r from-violet-600 to-purple-600 p-6 rounded-xl text-white">
                   <p className="text-lg font-medium italic">
-                    "Inspiring the next generation of tech-savvy business leaders and fostering collaboration between 
-                    the fields of computer science and business."
+                    &ldquo;Inspiring the next generation of tech-savvy business leaders and fostering collaboration between 
+                    the fields of computer science and business.&rdquo;
                   </p>
                 </div>
 

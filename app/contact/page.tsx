@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Phone, Mail, Clock, MapPin } from 'lucide-react'
+import { CalendarDays } from 'lucide-react'
 import Link from "next/link"
 
 const fadeInUp = {
