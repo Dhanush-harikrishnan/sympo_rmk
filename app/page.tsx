@@ -39,9 +39,9 @@ const events = [
     title: "Paper Presentation",
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
     image: "/placeholder.avif",
-    coordinators: "Varshaa , Aswin and partha",
+    coordinators: "Varshaa",
     details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
-    registrationLink: "https://forms.gle/exampleLink1"
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
   },
   {
     title: "Shark Tank",
@@ -49,41 +49,42 @@ const events = [
     image: "/placeholder.avif",
     coordinators: "Harini P and Keerthana",
     details: "Get a chance to present your business ideas to a panel of successful entrepreneurs and investors. Receive valuable feedback and potentially secure funding for your startup.",
-    registrationLink: "https://forms.gle/exampleLink2"
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
   },
   {
     title: "Cognitive Hackathon",
     description: "Solve complex problems using AI and machine learning techniques.",
     image: "/placeholder.avif",
     coordinators: "Siva and Sharvesh Guru",
-    details: "Participate in a hackathon where you will solve complex problems using AI and machine learning techniques. Collaborate with peers and showcase your skills.",
-    registrationLink: "https://forms.gle/exampleLink3"
+    details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
   },
   {
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
     image: "/placeholder.avif",
     coordinators: "Sheegan Sri and Prasath",
-    details: "Test your coding skills in this event where you will be required to write and debug programs. Compete with others and prove your expertise.",
-    registrationLink: "https://forms.gle/exampleLink4"
+    details: "Demonstrate your programming prowess in this coding competition. Face challenging problems and debug complex code to prove your skills in various programming languages.",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
   },
   {
     title: "Virtual Stock Market",
     description: "Test your financial acumen in a simulated stock market environment.",
     image: "/placeholder.avif",
     coordinators: "Kavindar and Venkat Sai",
-    details: "Participate in a virtual stock market simulation where you can test your financial acumen. Make investment decisions and see how well you can grow your portfolio.",
-    registrationLink: "https://forms.gle/exampleLink5"
+    details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
   },
   {
     title: "Event 2",
     description: "Details coming soon.",
     image: "/placeholder.avif",
     coordinators: "Sreecharan and Joilin",
-    details: "Stay tuned for more information about this exciting event.",
-    registrationLink: "https://forms.gle/exampleLink6"
+    details: "Stay tuned for more information about this exciting upcoming event!",
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
   }
 ]
+
 export default function Home() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -180,7 +181,7 @@ export default function Home() {
                 <Card className="h-full flex flex-col">
                   <CardHeader>
                     <CardTitle className="text-violet-700">{event.title}</CardTitle>
-                    <CardDescription>{event.coordinators}</CardDescription>
+                    <CardDescription>Coordinators: {event.coordinators}</CardDescription>
                   </CardHeader>
                   <CardContent className="flex-grow">
                     <Image
@@ -192,21 +193,43 @@ export default function Home() {
                     />
                     <p className="text-gray-600">{event.description}</p>
                   </CardContent>
-                  <CardFooter className="flex justify-between">
+                  <CardFooter className="flex justify-between mt-auto">
                     <Dialog>
                       <DialogTrigger asChild>
                         <Button variant="outline" className="text-violet-700 border-violet-700 hover:bg-violet-50">View Details</Button>
                       </DialogTrigger>
-                      <DialogContent>
+                      <DialogContent className="sm:max-w-[425px]">
                         <DialogHeader>
                           <DialogTitle>{event.title}</DialogTitle>
-                          <DialogDescription>{event.details}</DialogDescription>
+                          <DialogDescription>
+                            {event.details}
+                          </DialogDescription>
                         </DialogHeader>
+                        <div className="mt-4">
+                          <p className="text-sm text-gray-500">Coordinators: {event.coordinators}</p>
+                        </div>
                       </DialogContent>
                     </Dialog>
-                    <Button asChild className="bg-violet-700 hover:bg-violet-800 text-white">
-                      <Link href={event.registrationLink}>Register</Link>
-                    </Button>
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Button className="bg-violet-700 hover:bg-violet-800 text-white">
+                          Register
+                        </Button>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[900px] sm:w-[95vw] sm:h-[95vh] flex flex-col items-center">
+                        <DialogHeader>
+                          <DialogTitle>Register for {event.title}</DialogTitle>
+                        </DialogHeader>
+                        <div className="mt-4 w-full h-full flex justify-center">
+                          <iframe
+                            src={event.registrationLink}
+                            style={{ width: '100%', height: '100%', border: 'none' }}
+                          >
+                            Loading…
+                          </iframe>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </CardFooter>
                 </Card>
               </motion.div>
