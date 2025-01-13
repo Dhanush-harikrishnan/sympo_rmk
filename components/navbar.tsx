@@ -32,7 +32,7 @@ const Navbar = () => {
                 className="mr-2"
               />
               <span className="text-lg font-bold text-violet-700 hidden sm:inline">RMK Engineering College</span>
-              <span className="text-lg font-bold text-violet-700 sm:hidden">RMK EC</span>
+              <span className="text-lg font-bold text-violet-700 sm:hidden">RMKEC</span>
             </Link>
           </div>
           <div className="hidden sm:flex sm:items-center sm:space-x-4">

@@ -41,7 +41,7 @@ const events = [
     image: "/placeholder.avif",
     coordinators: "Varshaa",
     details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    registrationLink: "https://forms.gle/1uvNyhS88KmwaE4r8"
   },
   {
     title: "Shark Tank",
@@ -94,7 +94,7 @@ export default function Home() {
         animate="animate"
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-24">
           <div className="flex flex-col md:flex-row items-center justify-between">
             <motion.div className="md:w-1/2 mb-8 md:mb-0" variants={fadeInLeft}>
               <h1 className="text-3xl sm:text-4xl font-bold mb-4 text-violet-700">CSBS Symposium 2025</h1>
@@ -107,7 +107,7 @@ export default function Home() {
               <Image
                 src="/Banner.jpg"
                 alt="Department Logo"
-                width={300}
+                width={400}
                 height={300}
                 className="rounded-full shadow-lg"
               />
@@ -123,7 +123,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-24">
           <Alert>
             <CalendarDays className="h-4 w-4" />
             <AlertTitle>Registration Deadline</AlertTitle>
@@ -141,7 +141,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-24">
           <div className="grid md:grid-cols-2 gap-8 items-center">
             <div>
               <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-700">About the Symposium</h2>
@@ -173,7 +173,7 @@ export default function Home() {
         viewport={{ once: true }}
         variants={fadeInUp}
       >
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-24">
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-violet-700">Featured Events</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {events.map((event, index) => (
@@ -216,14 +216,15 @@ export default function Home() {
                           Register
                         </Button>
                       </DialogTrigger>
-                      <DialogContent className="sm:max-w-[900px] sm:w-[95vw] sm:h-[95vh] flex flex-col items-center">
-                        <DialogHeader>
+                      <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
+                        <DialogHeader className="p-6">
                           <DialogTitle>Register for {event.title}</DialogTitle>
                         </DialogHeader>
-                        <div className="mt-4 w-full h-full flex justify-center">
+                        <div className="flex-grow overflow-hidden">
                           <iframe
                             src={event.registrationLink}
-                            style={{ width: '100%', height: '100%', border: 'none' }}
+                            className="w-full h-full border-none"
+                            title={`Registration form for ${event.title}`}
                           >
                             Loading…
                           </iframe>

@@ -1,5 +1,4 @@
 "use client"
-
 import Image from "next/image"
 import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
@@ -26,7 +25,7 @@ const events = [
     image: "/placeholder.avif",
     coordinators: "Varshaa",
     details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    registrationLink: "https://forms.gle/1uvNyhS88KmwaE4r8"
   },
   {
     title: "Shark Tank",
@@ -121,14 +120,15 @@ export default function Events() {
                         Register
                       </Button>
                     </DialogTrigger>
-                    <DialogContent className="sm:max-w-[900px] sm:w-[95vw] sm:h-[95vh] flex flex-col items-center">
-                      <DialogHeader>
+                    <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
+                      <DialogHeader className="p-6">
                         <DialogTitle>Register for {event.title}</DialogTitle>
                       </DialogHeader>
-                      <div className="mt-4 w-full h-full flex justify-center">
+                      <div className="flex-grow overflow-hidden">
                         <iframe
                           src={event.registrationLink}
-                          style={{ width: '100%', height: '100%', border: 'none' }}
+                          className="w-full h-full border-none"
+                          title={`Registration form for ${event.title}`}
                         >
                           Loading…
                         </iframe>
