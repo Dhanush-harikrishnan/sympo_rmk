@@ -124,21 +124,6 @@ const events = [
       "No external help or cheating allowed."
     ],
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
-  },
-  {
-    title: "Build of the Hour",
-    description: "A high-octane, 60-minute innovation sprint!",
-    image: "/build.png",
-    coordinators: "Sharvesh M S",
-    details: "Choose a domain, build a prototype, and showcase your innovation within one hour!",
-    rules: [
-      "Open to UG and PG students.",
-      "Teams of 1-2 members allowed.",
-      "Plagiarism is strictly prohibited.",
-      "Problem statement will be given on the spot.",
-      "30 minutes for POC, 30 minutes for prototype."
-    ],
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   }
 ];
 
