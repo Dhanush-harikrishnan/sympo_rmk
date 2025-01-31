@@ -6,7 +6,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { CalendarDays } from 'lucide-react'
+import { ArrowRight, CalendarDays, Users } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -39,17 +39,31 @@ const events = [
     title: "Paper Presentation",
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
     image: "/placeholder.avif",
-    coordinators: "Varshaa",
+    coordinators: "Varshaa, Aswin and Partha",
     details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
-    registrationLink: "https://forms.gle/1uvNyhS88KmwaE4r8"
+    rules: [
+      "Abstract submissions are mandatory before the deadline.",
+      "Papers must follow the IEEE format.",
+      "Presentations must use a PPT (max 8 slides).",
+      "5-6 minutes for presentation + 5 minutes Q&A.",
+      "The jury's decision will be final and binding."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Shark Tank",
     description: "Pitch your innovative business ideas to a panel of industry experts.",
-    image: "/placeholder.avif",
-    coordinators: "Harini P and Keerthana",
+    image: "/shark_tank.jpg",
+    coordinators: "Harini and Keerthana",
     details: "Get a chance to present your business ideas to a panel of successful entrepreneurs and investors. Receive valuable feedback and potentially secure funding for your startup.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Teams of 1-4 members allowed.",
+      "Business proposals must be submitted before the deadline.",
+      "Presentation format: PPT (max 10 slides).",
+      "Each team gets 6-8 minutes to pitch + 5 minutes Q&A.",
+      "Proposals from all domains welcome."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Cognitive Hackathon",
@@ -57,33 +71,76 @@ const events = [
     image: "/placeholder.avif",
     coordinators: "Siva and Sharvesh Guru",
     details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Teams of 1-3 members allowed.",
+      "Participants should bring their own laptops.",
+      "Problem statements will be provided at the start of the event.",
+      "Use of AI tools is permitted but must be disclosed.",
+      "Judging criteria include innovation, accuracy, and efficiency."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
-    image: "/placeholder.avif",
+    image: "/buc.jpg",
     coordinators: "Sheegan Sri and Prasath",
     details: "Demonstrate your programming prowess in this coding competition. Face challenging problems and debug complex code to prove your skills in various programming languages.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Solo or duo participation allowed.",
+      "Supported languages: C, C++, Python, Java.",
+      "Participants must bring their own laptops if possible.",
+      "Time-based scoring: Faster completion earns more points.",
+      "No external help or collaboration outside the team."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Virtual Stock Market",
     description: "Test your financial acumen in a simulated stock market environment.",
-    image: "/placeholder.avif",
+    image: "/vwsc.png",
     coordinators: "Kavindar and Venkat Sai",
     details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Solo or duo participation allowed.",
+      "Participants start with a virtual budget.",
+      "Trades and market fluctuations will be simulated in real-time.",
+      "Strategies must be ethical and fair.",
+      "The highest profit at the end of the competition wins."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Event 2",
-    description: "Details coming soon.",
+    title: "MystIO",
+    description: "Unravel cryptic clues and uncover a hidden secret!",
     image: "/placeholder.avif",
-    coordinators: "Sreecharan and Joilin",
-    details: "Stay tuned for more information about this exciting upcoming event!",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    coordinators: "Sarvesh and joilin",
+    details: "Solve puzzles and decipher messages in this thrilling adventure. Put your detective skills to the test!",
+    rules: [
+      "Participants must register before the event.",
+      "Solo or Duo participation allowed.",
+      "Time-based scoring: The fastest team wins!",
+      "Respect and fair play must be maintained.",
+      "No external help or cheating allowed."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
+  },
+  {
+    title: "Build of the Hour",
+    description: "A high-octane, 60-minute innovation sprint!",
+    image: "/build.png",
+    coordinators: "Jane Smith & Alex Brown",
+    details: "Choose a domain, build a prototype, and showcase your innovation within one hour!",
+    rules: [
+      "Open to UG and PG students.",
+      "Teams of 1-2 members allowed.",
+      "Plagiarism is strictly prohibited.",
+      "Problem statement will be given on the spot.",
+      "30 minutes for POC, 30 minutes for prototype."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   }
-]
+];
 
 export default function Home() {
   return (
@@ -141,7 +198,7 @@ export default function Home() {
             <CalendarDays className="h-4 w-4 text-violet-700 dark:text-violet-300" />
             <AlertTitle className="text-violet-800 dark:text-violet-200">Registration Deadline</AlertTitle>
             <AlertDescription className="text-gray-600 dark:text-gray-300">
-              Online registration closes on March 25, 2025. On-spot registration will be available.
+              Online registration closes on March 17, 2025. On-spot registration will be available.
             </AlertDescription>
           </Alert>
         </div>
@@ -181,8 +238,9 @@ export default function Home() {
         </div>
       </motion.section>
 
+      <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto">
       <motion.section
-        className="w-full py-12 sm:py-20 bg-gradient-to-b from-violet-50 to-white dark:from-violet-950 dark:to-gray-900"
+        className="w-full py-12 sm:py-20"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
@@ -192,77 +250,92 @@ export default function Home() {
           <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-violet-700">Featured Events</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {events.map((event, index) => (
-              <motion.div key={index} variants={fadeInUp} className="h-full">
-                <Card className="h-full flex flex-col">
+                <motion.div 
+                key={index} 
+                variants={fadeInUp}
+                whileHover={{ y: -5 }}
+                transition={{ type: "spring", stiffness: 300 }}
+                >
+                <Card className="group h-full flex flex-col bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300">
                   <CardHeader>
-                    <CardTitle className="text-violet-700">{event.title}</CardTitle>
-                    <CardDescription>Coordinators: {event.coordinators}</CardDescription>
+                  <CardTitle className="text-violet-800 dark:text-violet-200 flex items-center justify-between">
+                    {event.title}
+                    <span className="p-2 rounded-full bg-violet-100 dark:bg-violet-900/50 text-violet-600 dark:text-violet-300 group-hover:bg-violet-200 dark:group-hover:bg-violet-800/50 transition-colors">
+                    <ArrowRight className="w-4 h-4" />
+                    </span>
+                  </CardTitle>
+                  <CardDescription className="flex items-center gap-2 text-violet-600 dark:text-violet-400">
+                    <Users className="w-4 h-4" />
+                    Coordinators: {event.coordinators}
+                  </CardDescription>
                   </CardHeader>
                   <CardContent className="flex-grow">
-                    <div className="aspect-video relative mb-4 w-full">
-                      <Image
-                        src={event.image}
-                        alt={event.title}
-                        fill
-                        className="object-cover rounded-md"
-                        sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                      />
-                    </div>
-                    <p className="text-gray-600">{event.description}</p>
+                  <div className="relative group">
+                    <div className="absolute -inset-1 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg opacity-20 blur group-hover:opacity-30 transition-opacity duration-300" />
+                    <Image
+                    src={event.image}
+                    alt={event.title}
+                    width={300}
+                    height={200}
+                    className="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02] relative"
+                    />
+                  </div>
+                  <p className="mt-4 text-gray-600 dark:text-gray-300">{event.description}</p>
                   </CardContent>
-                  <CardFooter className="flex justify-between mt-auto">
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button variant="outline" className="text-violet-700 border-violet-700 hover:bg-violet-50">
-                          View Details
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="sm:max-w-[425px]">
-                        <DialogHeader>
-                          <DialogTitle>{event.title}</DialogTitle>
-                          <DialogDescription>{event.details}</DialogDescription>
-                        </DialogHeader>
-                        <div className="mt-4">
-                          <p className="text-sm text-gray-500">Coordinators: {event.coordinators}</p>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Button className="bg-violet-700 hover:bg-violet-800 text-white">
-                          Register
-                        </Button>
-                      </DialogTrigger>
-                      <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
-                        <DialogHeader className="p-6">
-                          <DialogTitle>Register for {event.title}</DialogTitle>
-                        </DialogHeader>
-                        <div className="flex-grow overflow-hidden">
-                          <iframe
-                            src={event.registrationLink}
-                            className="w-full h-full border-none"
-                            title={`Registration form for ${event.title}`}
-                          >
-                            Loading…
-                          </iframe>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
+                  <CardFooter className="flex justify-between mt-auto gap-4 pt-6">
+                  <Dialog>
+                    <DialogTrigger asChild>
+                    <Button 
+                      variant="outline" 
+                      className="bg-violet-50 dark:bg-violet-900/50 text-violet-700 dark:text-violet-300 border-violet-200 dark:border-violet-800 hover:bg-violet-100 dark:hover:bg-violet-800/50 transition-all duration-300"
+                    >
+                      View Details
+                    </Button>
+                    </DialogTrigger>
+                    <DialogContent className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm">
+                      <DialogHeader>
+                      <DialogTitle className="text-xl text-violet-800 dark:text-violet-200">
+                        {event.title}
+                      </DialogTitle>
+                      <DialogDescription className="text-gray-600 dark:text-gray-300">
+                        {event.details}
+                      </DialogDescription>
+                      </DialogHeader>
+                      <div className="mt-4">
+                      <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2 mb-4">
+                        <Users className="w-4 h-4" />
+                        Coordinators: {event.coordinators}
+                      </p>
+                      <h3 className="text-lg font-semibold mb-2 text-violet-800 dark:text-violet-200">Rules</h3>
+                      <ul className="list-disc pl-4 text-gray-600 dark:text-gray-300">
+                        {event.rules.map((rule, i) => (
+                        <li key={i}>{rule}</li>
+                        ))}
+                      </ul>
+                      </div>
+                    </DialogContent>
+                  </Dialog>
+                  <Button asChild className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300">
+                    <Link href={event.registrationLink} target="_blank" rel="noopener noreferrer">
+                    Register
+                    </Link>
+                  </Button>
                   </CardFooter>
                 </Card>
-              </motion.div>
+                </motion.div>
             ))}
           </div>
         </div>
       </motion.section>
+    </div>
 
-      <motion.section className="w-full py-12 sm:py-20 bg-white">
+        <motion.section className="w-full py-12 sm:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-violet-700">
-            Event Schedule
+          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
+          Event Schedule
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
+          <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">Morning Session</h3>
               <ul className="space-y-4">
                 <li className="flex justify-between">
@@ -279,7 +352,7 @@ export default function Home() {
                 </li>
               </ul>
             </Card>
-            <Card className="p-6">
+            <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">Afternoon Session</h3>
               <ul className="space-y-4">
                 <li className="flex justify-between">
@@ -300,49 +373,65 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <motion.section className="w-full py-12 sm:py-20 bg-gray-50">
+        <motion.section className="w-full py-12 sm:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-violet-700">
-            Prizes & Rewards
+          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
+          Prizes & Rewards for offline
           </h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-            <Card className="text-center p-6">
+          <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">First Prize</h3>
-              <p className="text-3xl font-bold text-violet-700 mb-4">₹10,000</p>
+              <p className="text-3xl font-bold text-violet-700 mb-4">₹1000</p>
               <p className="text-gray-600">Plus Certificate of Excellence</p>
             </Card>
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">Second Prize</h3>
-              <p className="text-3xl font-bold text-violet-700 mb-4">₹7,000</p>
+              <p className="text-3xl font-bold text-violet-700 mb-4">₹750</p>
               <p className="text-gray-600">Plus Certificate of Merit</p>
             </Card>
-            <Card className="text-center p-6">
+            <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">Third Prize</h3>
-              <p className="text-3xl font-bold text-violet-700 mb-4">₹5,000</p>
-              <p className="text-gray-600">Plus Certificate of Achievement</p>
+              <p className="text-3xl font-bold text-violet-700 mb-4">₹500</p>
+              <p className="text-gray-600 dark:text-gray-300">Plus Certificate of Achievement</p>
             </Card>
           </div>
         </div>
       </motion.section>
 
-      <motion.section className="w-full py-12 sm:py-20 bg-white">
+      <motion.section className="w-full py-12 sm:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-violet-700">
-            Important Guidelines
+          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
+          Prizes & Rewards for online
+          </h2>
+          
+          <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
+              <h3 className="text-xl font-semibold mb-4">Solo Winner</h3>
+              <p className="text-3xl font-bold text-violet-700 mb-4">₹1000</p>
+              <p className="text-gray-600">Plus Certificate of Excellence</p>
+            </Card>
+        
+        </div>
+      </motion.section>
+      
+
+        <motion.section className="w-full py-12 sm:py-20">
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
+          Important Guidelines
           </h2>
           <div className="grid md:grid-cols-2 gap-8">
-            <Card className="p-6">
+          <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">Registration Guidelines</h3>
               <ul className="space-y-3 list-disc pl-4">
-                <li>Registration fee: ₹300 per participant</li>
-                <li>Team size: Maximum 2 members per team</li>
+                <li>Registration fee: free</li>
+                <li>Team size: Maximum 2 members per team depends on events </li>
                 <li>Bring college ID cards for verification</li>
                 <li>On-spot registration subject to availability</li>
               </ul>
             </Card>
-            <Card className="p-6">
+            <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">General Rules</h3>
-              <ul className="space-y-3 list-disc pl-4">
+              <ul className="space-y-3 list-disc pl-4 text-gray-600 dark:text-gray-300">
                 <li>Participants must report 30 minutes before event</li>
                 <li>Decision of judges will be final</li>
                 <li>Certificates will be provided to all participants</li>
@@ -361,47 +450,46 @@ export default function Home() {
         variants={fadeInUp}
       >
         <div className="container mx-auto text-center px-4">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-violet-700">Organized by</h2>
-          <p className="text-xl sm:text-2xl font-semibold text-gray-700">Department of Computer Science and Business Systems</p>
+            <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-violet-800 dark:text-violet-200">Organized by</h2>
+            <p className="text-xl sm:text-2xl font-semibold text-violet-600 dark:text-violet-300">Department of Computer Science and Business Systems</p>
         </div>
       </motion.section>
 
-      <motion.section
-        className="w-full py-12 sm:py-20 bg-gray-100"
+        <motion.section
+        className="w-full py-12 sm:py-20"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
-      >
+        >
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-violet-700">Contact Us</h2>
-          <p className="text-lg sm:text-xl mb-8 text-gray-700">Have questions about the symposium?</p>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-violet-800 dark:text-violet-200">Contact Us</h2>
+          <p className="text-lg sm:text-xl mb-8 text-violet-600 dark:text-violet-300">Have questions about the symposium?</p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-            {/* Student Coordinators */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
+          {/* Student Coordinators */}
+          <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Varshaa: +91 98765 43210</p>
-                <p>Harini P: +91 98765 43211</p>
+                <p>Mr. T. Dayanithi </p>
               </div>
             </div>
 
             {/* Faculty Coordinators */}
-            <div className="bg-white p-6 rounded-lg shadow-md">
-              <h3 className="text-lg font-semibold mb-4 text-violet-700">Faculty Coordinator</h3>
+            <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Varun CM</p>
-                <p>Assistant Professor</p>
+                <p>Mr. C.M. Varun</p>
+                <p>Associate Professor</p>
               </div>
             </div>
 
             {/* Contact Information */}
-            <div className="bg-white p-6 rounded-lg shadow-md sm:col-span-2 lg:col-span-1">
-              <h3 className="text-lg font-semibold mb-4 text-violet-700">Contact Information</h3>
+            <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Email: info@csbssymposium.com</p>
-                <p>Phone: +91 123 456 7890</p>
+                <p>Shreegan : +91 88259 20804 </p>
+                <p>Harini p     : +91 6381 337 230</p>
               </div>
             </div>
           </div>
@@ -412,20 +500,20 @@ export default function Home() {
         </div>
       </motion.section>
 
-      <motion.section
-        className="w-full py-12 sm:py-20 bg-gray-50"
+        <motion.section
+        className="w-full py-12 sm:py-20"
         initial="initial"
         whileInView="animate"
         viewport={{ once: true }}
         variants={fadeInUp}
-      >
+        >
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-violet-700">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-violet-800 dark:text-violet-200">
             Venue Location
           </h2>
           <div className="grid md:grid-cols-2 gap-8 lg:gap-12">
             <div className="flex flex-col justify-center">
-              <Card className="p-6">
+                <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
                 <h3 className="text-xl font-semibold mb-4">RMK Engineering College</h3>
                 <p className="text-gray-600 mb-6">
                   206, Taluk, Gummidipoondi, Kavaraipettai,<br />
@@ -443,7 +531,7 @@ export default function Home() {
                   </Button>
                   <Button asChild variant="outline">
                     <Link 
-                      href="tel:+914467906666"
+                      href="tel:+91 88259 20804"
                     >
                       Contact
                     </Link>

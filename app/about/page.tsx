@@ -72,10 +72,10 @@ export default function About() {
           {/* Stats Cards */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
             {[
-              { number: "500+", label: "Participants" },
-              { number: "20+", label: "Events" },
+              { number: "100+", label: "Participants" },
+              { number: "6+", label: "Events" },
               { number: "10+", label: "Speakers" },
-              { number: "₹1L+", label: "Prize Pool" }
+              { number: "₹ Prize++", label: "Prize Pool" }
             ].map((stat, index) => (
               <motion.div
                 key={index}

@@ -17,17 +17,31 @@ const events = [
     title: "Paper Presentation",
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
     image: "/placeholder.avif",
-    coordinators: "Varshaa",
+    coordinators: "Varshaa, Aswin and Partha",
     details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
-    registrationLink: "https://forms.gle/1uvNyhS88KmwaE4r8"
+    rules: [
+      "Abstract submissions are mandatory before the deadline.",
+      "Papers must follow the IEEE format.",
+      "Presentations must use a PPT (max 8 slides).",
+      "5-6 minutes for presentation + 5 minutes Q&A.",
+      "The jury's decision will be final and binding."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Shark Tank",
     description: "Pitch your innovative business ideas to a panel of industry experts.",
-    image: "/placeholder.avif",
-    coordinators: "Harini P and Keerthana",
+    image: "/shark_tank.jpg",
+    coordinators: "Harini and Keerthana",
     details: "Get a chance to present your business ideas to a panel of successful entrepreneurs and investors. Receive valuable feedback and potentially secure funding for your startup.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Teams of 1-4 members allowed.",
+      "Business proposals must be submitted before the deadline.",
+      "Presentation format: PPT (max 10 slides).",
+      "Each team gets 6-8 minutes to pitch + 5 minutes Q&A.",
+      "Proposals from all domains welcome."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Cognitive Hackathon",
@@ -35,15 +49,29 @@ const events = [
     image: "/placeholder.avif",
     coordinators: "Siva and Sharvesh Guru",
     details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Teams of 1-3 members allowed.",
+      "Participants should bring their own laptops.",
+      "Problem statements will be provided at the start of the event.",
+      "Use of AI tools is permitted but must be disclosed.",
+      "Judging criteria include innovation, accuracy, and efficiency."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
-    image: "/placeholder.avif",
+    image: "/buc.jpg",
     coordinators: "Sheegan Sri and Prasath",
     details: "Demonstrate your programming prowess in this coding competition. Face challenging problems and debug complex code to prove your skills in various programming languages.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Solo or duo participation allowed.",
+      "Supported languages: C, C++, Python, Java.",
+      "Participants must bring their own laptops if possible.",
+      "Time-based scoring: Faster completion earns more points.",
+      "No external help or collaboration outside the team."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
     title: "Virtual Stock Market",
@@ -51,17 +79,47 @@ const events = [
     image: "/placeholder.avif",
     coordinators: "Kavindar and Venkat Sai",
     details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    rules: [
+      "Solo or duo participation allowed.",
+      "Participants start with a virtual budget.",
+      "Trades and market fluctuations will be simulated in real-time.",
+      "Strategies must be ethical and fair.",
+      "The highest profit at the end of the competition wins."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Event 2",
-    description: "Details coming soon.",
+    title: "MystIO",
+    description: "Unravel cryptic clues and uncover a hidden secret!",
     image: "/placeholder.avif",
-    coordinators: "Sreecharan and Joilin",
-    details: "Stay tuned for more information about this exciting upcoming event!",
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSfVCiZQJYwKsVLTdOMaZBKY6i2HWw3WrXSLsNuFgHgNa-0Rnw/viewform?embedded=true"
+    coordinators: "Sarvesh and joilin",
+    details: "Solve puzzles and decipher messages in this thrilling adventure. Put your detective skills to the test!",
+    rules: [
+      "Participants must register before the event.",
+      "Solo or Duo participation allowed.",
+      "Time-based scoring: The fastest team wins!",
+      "Respect and fair play must be maintained.",
+      "No external help or cheating allowed."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
+  },
+  {
+    title: "Build of the Hour",
+    description: "A high-octane, 60-minute innovation sprint!",
+    image: "/build.png",
+    coordinators: "Jane Smith & Alex Brown",
+    details: "Choose a domain, build a prototype, and showcase your innovation within one hour!",
+    rules: [
+      "Open to UG and PG students.",
+      "Teams of 1-2 members allowed.",
+      "Plagiarism is strictly prohibited.",
+      "Problem statement will be given on the spot.",
+      "30 minutes for POC, 30 minutes for prototype."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   }
-]
+];
+
 
 export default function Events() {
   return (
@@ -153,18 +211,24 @@ export default function Events() {
                     </DialogTrigger>
                     <DialogContent className="bg-white/95 dark:bg-gray-900/95 backdrop-blur-sm">
                       <DialogHeader>
-                        <DialogTitle className="text-xl text-violet-800 dark:text-violet-200">
-                          {event.title}
-                        </DialogTitle>
-                        <DialogDescription className="text-gray-600 dark:text-gray-300">
-                          {event.details}
-                        </DialogDescription>
+                      <DialogTitle className="text-xl text-violet-800 dark:text-violet-200">
+                        {event.title}
+                      </DialogTitle>
+                      <DialogDescription className="text-gray-600 dark:text-gray-300">
+                        {event.details}
+                      </DialogDescription>
                       </DialogHeader>
                       <div className="mt-4">
-                        <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2">
-                          <Users className="w-4 h-4" />
-                          Coordinators: {event.coordinators}
-                        </p>
+                      <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2 mb-4">
+                        <Users className="w-4 h-4" />
+                        Coordinators: {event.coordinators}
+                      </p>
+                      <h3 className="text-lg font-semibold mb-2 text-violet-800 dark:text-violet-200">Rules</h3>
+                      <ul className="list-disc pl-4 text-gray-600 dark:text-gray-300">
+                        {event.rules.map((rule, i) => (
+                        <li key={i}>{rule}</li>
+                        ))}
+                      </ul>
                       </div>
                     </DialogContent>
                   </Dialog>
