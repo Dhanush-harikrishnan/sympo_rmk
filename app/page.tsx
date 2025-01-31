@@ -98,7 +98,7 @@ const events = [
   {
     title: "Stock Market Challenge Meme War",
     description: "Test your financial acumen in a simulated stock market environment.",
-    image: "/vwsc.png",
+    image: "/vwsc.jpg",
     coordinators: "Kavindar ,Venkat Sai and Hari",
     details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
     rules: [
@@ -113,7 +113,7 @@ const events = [
   {
     title: "MystIO",
     description: "Unravel cryptic clues and uncover a hidden secret!",
-    image: "/placeholder.avif",
+    image: "/m.jpg",
     coordinators: "Sarvesh and joilin",
     details: "Solve puzzles and decipher messages in this thrilling adventure. Put your detective skills to the test!",
     rules: [
@@ -158,6 +158,7 @@ export default function Home() {
           <div className="absolute inset-0 bg-[url('/grid.svg')] bg-center [mask-image:linear-gradient(180deg,white,rgba(255,255,255,0))]" />
         </div>
 
+        <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10"></div>
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl relative z-10">
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
             <motion.div className="w-full md:w-1/2 max-w-2xl" variants={fadeInLeft}>
@@ -346,7 +347,7 @@ export default function Home() {
                           <iframe
                             src={event.registrationLink}
                             className="w-full h-full border-none"
-                            title={`Registration form for ${event.title}`}
+                            title={`Registration form for {event.title}`}
                           >
                             Loading…
                           </iframe>

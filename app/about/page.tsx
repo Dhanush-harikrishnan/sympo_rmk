@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Card } from "@/components/ui/card"
-import { Sparkles, Globe2, Brain, Cpu, Trophy, Users, BookOpen, ShieldCheck } from 'lucide-react'
+import { Sparkles, Cpu, Users, BookOpen, ShieldCheck } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
