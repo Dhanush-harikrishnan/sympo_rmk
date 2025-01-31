@@ -44,35 +44,35 @@ export default function Contact() {
       >
         <div className="grid md:grid-cols-2 gap-8">
           {/* Event Coordinators */}
-          <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300">
-            <h2 className="text-xl font-semibold mb-6 text-violet-800 dark:text-violet-200">Student Coordinators</h2>
+            <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300">
+            <h2 className="text-xl font-semibold mb-6 text-violet-800 dark:text-violet-200">Contact for any doubts</h2>
             <div className="space-y-4">
               <div className="space-y-2">
+              <h3 className="font-medium text-violet-700 dark:text-violet-300"></h3>
+              <p className="text-gray-600 dark:text-gray-300"> Shreegan Sri : <Link href="tel:+91 88259 20804" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">+91 98765 43210</Link></p>
+                </div>
+                <div className="space-y-2">
                 <h3 className="font-medium text-violet-700 dark:text-violet-300"></h3>
-                <p className="text-gray-600 dark:text-gray-300"> Shreegan Sri : <Link href="tel:+91 88259 20804" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">+91 98765 43210</Link></p>
-              </div>
-              <div className="space-y-2">
-                <h3 className="font-medium text-violet-700 dark:text-violet-300"></h3>
-                <p className="text-gray-600 dark:text-gray-300">Harini P: <Link href="tel:+91 6381 337 230" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">+91 98765 43211</Link></p>
-              </div>
+                <p className="text-gray-600 dark:text-gray-300">Kavindar: <Link href="tel:+91 81481 80104" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">+91 98765 43211</Link></p>
+                </div>
             </div>
           </Card>
 
           {/* Faculty Contact */}
-          <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300">
+            <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300">
             <h2 className="text-xl font-semibold mb-6 text-violet-800 dark:text-violet-200">Faculty Coordinator</h2>
             <div className="space-y-4">
-              <div>
+                <div>
                 <h3 className="font-medium text-violet-700 dark:text-violet-300">Varun CM</h3>
                 <p className="text-gray-600 dark:text-gray-300">Associate Professor</p>
                 <p className="text-gray-600 dark:text-gray-300">Department of CSBS</p>
-              </div>
-              <div className="pt-2">
+                </div>
+                <div className="pt-2">
                 <p className="text-gray-600 dark:text-gray-300">For official communications and queries</p>
                 <Link href="mailto:info@csbssymposium.com" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">
                   events.csbs@rmkec.ac.in
                 </Link>
-              </div>
+                </div>
             </div>
           </Card>
         </div>

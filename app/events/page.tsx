@@ -14,9 +14,9 @@ const fadeInUp = {
 
 const events = [
   {
-    title: "Paper Presentation",
+    title: "Research Guru",
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
-    image: "/placeholder.avif",
+    image: "/rs.png",
     coordinators: "Varshaa, Aswin and Partha",
     details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
     rules: [
@@ -44,24 +44,9 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Cognitive Hackathon",
-    description: "Solve complex problems using AI and machine learning techniques.",
-    image: "/placeholder.avif",
-    coordinators: "Siva and Sharvesh Guru",
-    details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
-    rules: [
-      "Teams of 1-3 members allowed.",
-      "Participants should bring their own laptops.",
-      "Problem statements will be provided at the start of the event.",
-      "Use of AI tools is permitted but must be disclosed.",
-      "Judging criteria include innovation, accuracy, and efficiency."
-    ],
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
-  },
-  {
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
-    image: "/buc.jpg",
+    image: "/buc.png",
     coordinators: "Sheegan Sri and Prasath",
     details: "Demonstrate your programming prowess in this coding competition. Face challenging problems and debug complex code to prove your skills in various programming languages.",
     rules: [
@@ -74,10 +59,25 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Virtual Stock Market",
+    title: "Think Hack",
+    description: "Solve complex problems using AI and machine learning techniques.",
+    image: "/th.png",
+    coordinators: "Siva and Sharvesh Guru",
+    details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
+    rules: [
+      "Teams of 1-3 members allowed.",
+      "Participants should bring their own laptops.",
+      "Problem statements will be provided at the start of the event.",
+      "Use of AI tools is permitted but must be disclosed.",
+      "Judging criteria include innovation, accuracy, and efficiency."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
+  },
+  {
+    title: "Stock Market Challenge Meme War",
     description: "Test your financial acumen in a simulated stock market environment.",
-    image: "/placeholder.avif",
-    coordinators: "Kavindar and Venkat Sai",
+    image: "/vwsc.png",
+    coordinators: "Kavindar ,Venkat Sai and Hari",
     details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
     rules: [
       "Solo or duo participation allowed.",
@@ -107,7 +107,7 @@ const events = [
     title: "Build of the Hour",
     description: "A high-octane, 60-minute innovation sprint!",
     image: "/build.png",
-    coordinators: "Jane Smith & Alex Brown",
+    coordinators: "Sharvesh M S",
     details: "Choose a domain, build a prototype, and showcase your innovation within one hour!",
     rules: [
       "Open to UG and PG students.",

@@ -38,7 +38,7 @@ const events = [
   {
     title: "Research Guru",
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
-    image: "/placeholder.avif",
+    image: "/rs.png",
     coordinators: "Varshaa, Aswin and Partha",
     details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
     rules: [
@@ -68,7 +68,7 @@ const events = [
   {
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
-    image: "/buc.jpg",
+    image: "/buc.png",
     coordinators: "Sheegan Sri and Prasath",
     details: "Demonstrate your programming prowess in this coding competition. Face challenging problems and debug complex code to prove your skills in various programming languages.",
     rules: [
@@ -83,7 +83,7 @@ const events = [
   {
     title: "Think Hack",
     description: "Solve complex problems using AI and machine learning techniques.",
-    image: "/placeholder.avif",
+    image: "/th.png",
     coordinators: "Siva and Sharvesh Guru",
     details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
     rules: [
@@ -99,7 +99,7 @@ const events = [
     title: "Stock Market Challenge Meme War",
     description: "Test your financial acumen in a simulated stock market environment.",
     image: "/vwsc.png",
-    coordinators: "Kavindar and Venkat Sai",
+    coordinators: "Kavindar ,Venkat Sai and Hari",
     details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
     rules: [
       "Solo or duo participation allowed.",
@@ -129,7 +129,7 @@ const events = [
     title: "Build of the Hour",
     description: "A high-octane, 60-minute innovation sprint!",
     image: "/build.png",
-    coordinators: "Jane Smith & Alex Brown",
+    coordinators: "Sharvesh M S",
     details: "Choose a domain, build a prototype, and showcase your innovation within one hour!",
     rules: [
       "Open to UG and PG students.",
@@ -199,7 +199,7 @@ export default function Home() {
             <CalendarDays className="h-4 w-4 text-violet-700 dark:text-violet-300" />
             <AlertTitle className="text-violet-800 dark:text-violet-200">Registration Deadline</AlertTitle>
             <AlertDescription className="text-gray-600 dark:text-gray-300">
-              Online registration closes on March 17, 2025. On-spot registration will be available.
+              Online registration closes on March 17, 2025. On-spot registration will not be available.
             </AlertDescription>
           </Alert>
         </div>
@@ -381,8 +381,8 @@ export default function Home() {
                   <span>Inauguration Ceremony</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>10:00 AM - 12:30 PM</span>
-                  <span>Technical Events - Round 1</span>
+                  <span>10:00 AM - 12:00 PM</span>
+                  <span>Events - Round 1</span>
                 </li>
               </ul>
             </Card>
@@ -390,16 +390,16 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Afternoon Session</h3>
               <ul className="space-y-4">
                 <li className="flex justify-between">
-                  <span>1:30 PM - 3:30 PM</span>
-                  <span>Technical Events - Final Round</span>
+                  <span>12:00 PM - 1:00 PM</span>
+                  <span>Lunch</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>3:30 PM - 4:30 PM</span>
+                  <span>1:00 PM - 2:30 PM</span>
+                  <span>Events - Final Round</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>2:00 PM - 3:00 PM</span>
                   <span>Prize Distribution</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>4:30 PM - 5:00 PM</span>
-                  <span>Valedictory Function</span>
                 </li>
               </ul>
             </Card>
@@ -407,45 +407,19 @@ export default function Home() {
         </div>
       </motion.section>
 
-        <motion.section className="w-full py-12 sm:py-20">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
-          Prizes & Rewards for offline
-          </h2>
-          <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
-          <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
-              <h3 className="text-xl font-semibold mb-4">First Prize</h3>
-              <p className="text-3xl font-bold text-violet-700 mb-4">₹1000</p>
-              <p className="text-gray-600">Plus Certificate of Excellence</p>
-            </Card>
-            <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
-              <h3 className="text-xl font-semibold mb-4">Second Prize</h3>
-              <p className="text-3xl font-bold text-violet-700 mb-4">₹750</p>
-              <p className="text-gray-600">Plus Certificate of Merit</p>
-            </Card>
-            <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
-              <h3 className="text-xl font-semibold mb-4">Third Prize</h3>
-              <p className="text-3xl font-bold text-violet-700 mb-4">₹500</p>
-              <p className="text-gray-600 dark:text-gray-300">Plus Certificate of Achievement</p>
-            </Card>
-          </div>
-        </div>
-      </motion.section>
-
       <motion.section className="w-full py-12 sm:py-20">
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
-          Prizes & Rewards for online
-          </h2>
-          
-          <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
-              <h3 className="text-xl font-semibold mb-4">Solo Winner</h3>
-              <p className="text-3xl font-bold text-violet-700 mb-4">₹1000</p>
-              <p className="text-gray-600">Plus Certificate of Excellence</p>
-            </Card>
-        
-        </div>
-      </motion.section>
+  <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+    <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
+      Exciting Prizes, Rewards & Certificates Await!
+    </h2>
+    <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
+      <h3 className="text-xl font-semibold mb-4">Win Big!</h3>
+      <p className="text-3xl font-bold text-violet-700 mb-4">Cash Prizes & Prestigious Certificates</p>
+      <p className="text-gray-600">Offline & Online Categories</p>
+    </Card>
+  </div>
+</motion.section>
+
       
 
         <motion.section className="w-full py-12 sm:py-20">
