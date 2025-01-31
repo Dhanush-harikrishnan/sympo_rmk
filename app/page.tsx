@@ -175,9 +175,10 @@ export default function Home() {
                 <Image
                   src="/Banner.jpg"
                   alt="Symposium Banner"
-                  width={500}
-                  height={375}
-                  className="rounded-lg shadow-lg object-cover w-full max-w-[500px] relative z-10"
+                  layout="responsive"
+                  width={700}
+                  height={475}
+                  className="rounded-lg shadow-lg object-cover w-full h-auto max-w-[500px] relative z-10"
                   priority
                 />
               </div>
