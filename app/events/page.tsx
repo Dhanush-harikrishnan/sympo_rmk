@@ -76,7 +76,7 @@ const events = [
   {
     title: "Stock Market Challenge Meme War",
     description: "Test your financial acumen in a simulated stock market environment.",
-    image: "/vwsc.png",
+    image: "/vwsc.jpg",
     coordinators: "Kavindar ,Venkat Sai and Hari",
     details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
     rules: [
@@ -91,7 +91,7 @@ const events = [
   {
     title: "MystIO",
     description: "Unravel cryptic clues and uncover a hidden secret!",
-    image: "/placeholder.avif",
+    image: "/m.jpg",
     coordinators: "Sarvesh and joilin",
     details: "Solve puzzles and decipher messages in this thrilling adventure. Put your detective skills to the test!",
     rules: [
@@ -119,7 +119,6 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   }
 ];
-
 
 export default function Events() {
   return (
