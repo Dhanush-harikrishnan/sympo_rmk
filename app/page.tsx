@@ -36,7 +36,7 @@ const fadeInRight = {
 
 const events = [
   {
-    title: "Paper Presentation",
+    title: "Research Guru",
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
     image: "/placeholder.avif",
     coordinators: "Varshaa, Aswin and Partha",
@@ -66,21 +66,6 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Cognitive Hackathon",
-    description: "Solve complex problems using AI and machine learning techniques.",
-    image: "/placeholder.avif",
-    coordinators: "Siva and Sharvesh Guru",
-    details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
-    rules: [
-      "Teams of 1-3 members allowed.",
-      "Participants should bring their own laptops.",
-      "Problem statements will be provided at the start of the event.",
-      "Use of AI tools is permitted but must be disclosed.",
-      "Judging criteria include innovation, accuracy, and efficiency."
-    ],
-    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
-  },
-  {
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
     image: "/buc.jpg",
@@ -96,7 +81,22 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Virtual Stock Market",
+    title: "Think Hack",
+    description: "Solve complex problems using AI and machine learning techniques.",
+    image: "/placeholder.avif",
+    coordinators: "Siva and Sharvesh Guru",
+    details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
+    rules: [
+      "Teams of 1-3 members allowed.",
+      "Participants should bring their own laptops.",
+      "Problem statements will be provided at the start of the event.",
+      "Use of AI tools is permitted but must be disclosed.",
+      "Judging criteria include innovation, accuracy, and efficiency."
+    ],
+    registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
+  },
+  {
+    title: "Stock Market Challenge Meme War",
     description: "Test your financial acumen in a simulated stock market environment.",
     image: "/vwsc.png",
     coordinators: "Kavindar and Venkat Sai",
@@ -255,6 +255,8 @@ export default function Home() {
                 variants={fadeInUp}
                 whileHover={{ y: -5 }}
                 transition={{ type: "spring", stiffness: 300 }}
+                initial="initial"
+                animate="animate"
                 >
                 <Card className="group h-full flex flex-col bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 hover:border-violet-300 dark:hover:border-violet-700 transition-all duration-300">
                   <CardHeader>
@@ -302,23 +304,54 @@ export default function Home() {
                       </DialogDescription>
                       </DialogHeader>
                       <div className="mt-4">
-                      <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2 mb-4">
-                        <Users className="w-4 h-4" />
-                        Coordinators: {event.coordinators}
-                      </p>
-                      <h3 className="text-lg font-semibold mb-2 text-violet-800 dark:text-violet-200">Rules</h3>
-                      <ul className="list-disc pl-4 text-gray-600 dark:text-gray-300">
-                        {event.rules.map((rule, i) => (
-                        <li key={i}>{rule}</li>
-                        ))}
-                      </ul>
+                        <div className="relative group mb-4">
+                          <div className="absolute -inset-1 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg opacity-20 blur group-hover:opacity-30 transition-opacity duration-300" />
+                          <Image
+                            src={event.image}
+                            alt={event.title}
+                            layout="responsive"
+                            width={700}
+                            height={475}
+                            className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02] relative"
+                          />
+                        </div>
+                        <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2 mb-4">
+                          <Users className="w-4 h-4" />
+                          Coordinators: {event.coordinators}
+                        </p>
+                        <h3 className="text-lg font-semibold mb-2 text-violet-800 dark:text-violet-200">Rules</h3>
+                        <ul className="list-disc pl-4 text-gray-600 dark:text-gray-300">
+                          {event.rules.map((rule, i) => (
+                          <li key={i}>{rule}</li>
+                          ))}
+                        </ul>
                       </div>
                     </DialogContent>
                   </Dialog>
-                  <Button asChild className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300">
-                    <Link href={event.registrationLink} target="_blank" rel="noopener noreferrer">
-                    Register
-                    </Link>
+                  <Button 
+                    className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300"
+                  >
+                    <Dialog>
+                      <DialogTrigger asChild>
+                        <Link href="#">
+                          Register
+                        </Link>
+                      </DialogTrigger>
+                      <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
+                        <DialogHeader className="p-6 bg-gradient-to-r from-violet-700 to-purple-700 dark:from-violet-800 dark:to-purple-800 text-white">
+                          <DialogTitle>Register for {event.title}</DialogTitle>
+                        </DialogHeader>
+                        <div className="flex-grow overflow-hidden">
+                          <iframe
+                            src={event.registrationLink}
+                            className="w-full h-full border-none"
+                            title={`Registration form for ${event.title}`}
+                          >
+                            Loading…
+                          </iframe>
+                        </div>
+                      </DialogContent>
+                    </Dialog>
                   </Button>
                   </CardFooter>
                 </Card>
@@ -339,11 +372,11 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Morning Session</h3>
               <ul className="space-y-4">
                 <li className="flex justify-between">
-                  <span>8:30 AM - 9:30 AM</span>
+                  <span>8:30 AM - 9:00 AM</span>
                   <span>Registration & Kit Distribution</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>9:30 AM - 10:00 AM</span>
+                  <span>9:00 AM - 10:00 AM</span>
                   <span>Inauguration Ceremony</span>
                 </li>
                 <li className="flex justify-between">
@@ -424,9 +457,9 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Registration Guidelines</h3>
               <ul className="space-y-3 list-disc pl-4">
                 <li>Registration fee: free</li>
-                <li>Team size: Maximum 2 members per team depends on events </li>
-                <li>Bring college ID cards for verification</li>
-                <li>On-spot registration subject to availability</li>
+                <li>Team size depends on events but each person should register individually </li>
+                <li>Bring college ID cards which is mandatory</li>
+                <li>On-spot registration is not available</li>
               </ul>
             </Card>
             <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
@@ -467,20 +500,20 @@ export default function Home() {
           <p className="text-lg sm:text-xl mb-8 text-violet-600 dark:text-violet-300">Have questions about the symposium?</p>
           
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8 max-w-4xl mx-auto mb-8">
-          {/* Student Coordinators */}
+          {/* Faculty Coordinators */}
           <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
-              <div className="space-y-2 text-gray-600">
-                <p>Mr. T. Dayanithi </p>
-              </div>
-            </div>
-
-            {/* Faculty Coordinators */}
-            <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
-              <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
+              <h3 className="text-lg font-semibold mb-4 text-violet-700">Faculty Coordinators</h3>
               <div className="space-y-2 text-gray-600">
                 <p>Mr. C.M. Varun</p>
                 <p>Associate Professor</p>
+              </div>
+            </div>
+
+          {/* Student Coordinators */}
+          <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
+              <h3 className="text-lg font-semibold mb-4 text-violet-700">Student President</h3>
+              <div className="space-y-2 text-gray-600">
+                <p>Mr. T. Dayanithi </p>
               </div>
             </div>
 
@@ -489,7 +522,7 @@ export default function Home() {
               <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
               <div className="space-y-2 text-gray-600">
                 <p>Shreegan : +91 88259 20804 </p>
-                <p>Harini p     : +91 6381 337 230</p>
+                <p>Kavindar     : +91 81481 80104 </p>
               </div>
             </div>
           </div>

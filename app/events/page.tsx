@@ -219,16 +219,27 @@ export default function Events() {
                       </DialogDescription>
                       </DialogHeader>
                       <div className="mt-4">
-                      <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2 mb-4">
-                        <Users className="w-4 h-4" />
-                        Coordinators: {event.coordinators}
-                      </p>
-                      <h3 className="text-lg font-semibold mb-2 text-violet-800 dark:text-violet-200">Rules</h3>
-                      <ul className="list-disc pl-4 text-gray-600 dark:text-gray-300">
-                        {event.rules.map((rule, i) => (
-                        <li key={i}>{rule}</li>
-                        ))}
-                      </ul>
+                        <div className="relative group mb-4">
+                          <div className="absolute -inset-1 bg-gradient-to-r from-violet-500 to-purple-500 rounded-lg opacity-20 blur group-hover:opacity-30 transition-opacity duration-300" />
+                          <Image
+                            src={event.image}
+                            alt={event.title}
+                            layout="responsive"
+                            width={700}
+                            height={475}
+                            className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02] relative"
+                          />
+                        </div>
+                        <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2 mb-4">
+                          <Users className="w-4 h-4" />
+                          Coordinators: {event.coordinators}
+                        </p>
+                        <h3 className="text-lg font-semibold mb-2 text-violet-800 dark:text-violet-200">Rules</h3>
+                        <ul className="list-disc pl-4 text-gray-600 dark:text-gray-300">
+                          {event.rules.map((rule, i) => (
+                          <li key={i}>{rule}</li>
+                          ))}
+                        </ul>
                       </div>
                     </DialogContent>
                   </Dialog>
