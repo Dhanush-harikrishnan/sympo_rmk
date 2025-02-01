@@ -6,6 +6,7 @@ import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle }
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
 import { Trophy, Users, Calendar, ArrowRight } from 'lucide-react'
 
+
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
   animate: { opacity: 1, y: 0 },
@@ -122,9 +123,12 @@ export default function Events() {
           animate="animate"
           variants={fadeInUp}
         >
-          <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center bg-gradient-to-r from-white via-purple-200 to-violet-200 bg-clip-text text-transparent">
-            CSBS Symposium 2025 Events
-          </h1>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
+            <span className="text-white">CISB</span>
+            <span className="text-yellow-400">O</span>
+            <span className="text-white">SIUM</span>
+            <span className="text-violet-200"> 2025 Events</span>
+            </h1>
           
           <div className="flex justify-center gap-8 flex-wrap mb-12">
             <div className="flex items-center gap-2">
@@ -141,14 +145,52 @@ export default function Events() {
             </div>
           </div>
         </motion.div>
-      </div>
+        </div>
 
-      <motion.div
+        <motion.div
+        className="container mx-auto px-4 py-8 relative z-20 text-center"
+        initial="initial"
+        animate="animate"
+        variants={fadeInUp}
+        >
+        <div className="max-w-3xl mx-auto bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 rounded-lg p-8">
+          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-800 dark:text-violet-200">
+          Register Now for CISBOSIUM 2025!
+          </h2>
+          <p className="text-gray-600 dark:text-gray-300 mb-6">
+          Join us for an exciting journey of innovation, learning, and competition. 
+          Register now to participate in any of our events and showcase your talents!
+          </p>
+          <Dialog>
+          <DialogTrigger asChild>
+            <Button className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300">
+            Register for Events
+            </Button>
+          </DialogTrigger>
+          <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
+            <DialogHeader className="p-6 bg-gradient-to-r from-violet-700 to-purple-700 dark:from-violet-800 dark:to-purple-800 text-white">
+            <DialogTitle>Register for CISBOSIUM 2025</DialogTitle>
+            </DialogHeader>
+            <div className="flex-grow overflow-hidden">
+            <iframe
+              src="https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
+              className="w-full h-full border-none"
+              title="Event registration form"
+            >
+              Loading...
+            </iframe>
+            </div>
+          </DialogContent>
+          </Dialog>
+        </div>
+        </motion.div>
+
+        <motion.div
         className="container mx-auto px-4 py-16 relative z-20 -mt-8"
         initial="initial"
         animate="animate"
         variants={fadeInUp}
-      >
+        >
         <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {events.map((event, index) => (
             <motion.div 
@@ -183,7 +225,7 @@ export default function Events() {
                   </div>
                   <p className="mt-4 text-gray-600 dark:text-gray-300">{event.description}</p>
                 </CardContent>
-                <CardFooter className="flex justify-between mt-auto gap-4 pt-6">
+                <CardFooter className="flex justify-end mt-auto gap-4 pt-6">
                   <Dialog>
                     <DialogTrigger asChild>
                       <Button 
@@ -224,27 +266,6 @@ export default function Events() {
                           <li key={i}>{rule}</li>
                           ))}
                         </ul>
-                      </div>
-                    </DialogContent>
-                  </Dialog>
-                  <Dialog>
-                    <DialogTrigger asChild>
-                      <Button className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300">
-                        Register
-                      </Button>
-                    </DialogTrigger>
-                    <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
-                      <DialogHeader className="p-6 bg-gradient-to-r from-violet-700 to-purple-700 dark:from-violet-800 dark:to-purple-800 text-white">
-                        <DialogTitle>Register for {event.title}</DialogTitle>
-                      </DialogHeader>
-                      <div className="flex-grow overflow-hidden">
-                        <iframe
-                          src={event.registrationLink}
-                          className="w-full h-full border-none"
-                          title={`Registration form for ${event.title}`}
-                        >
-                          Loading…
-                        </iframe>
                       </div>
                     </DialogContent>
                   </Dialog>

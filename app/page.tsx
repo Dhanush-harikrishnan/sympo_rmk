@@ -223,9 +223,54 @@ export default function Home() {
             </div>
           </div>
         </div>
-      </motion.section>
+        </motion.section>
 
-      <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto">
+          <motion.section
+          className="w-full py-8 relative z-20"
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          variants={fadeInUp}
+          >
+          <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+            <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 rounded-lg p-8">
+            <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+              <div className="flex-1">
+              <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-800 dark:text-violet-200">
+                Register Now for CISBOSIUM 2025!
+              </h2>
+              <p className="text-gray-600 dark:text-gray-300">
+                Join us for an exciting journey of innovation, learning, and competition. 
+                Register now to participate in any of our events and showcase your talents!
+              </p>
+              </div>
+              <Dialog>
+              <DialogTrigger asChild>
+                <Button className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300 whitespace-nowrap">
+                Register for Events
+                </Button>
+              </DialogTrigger>
+              <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
+                <DialogHeader className="p-6 bg-gradient-to-r from-violet-700 to-purple-700 dark:from-violet-800 dark:to-purple-800 text-white">
+                <DialogTitle>Register for CISBOSIUM 2025</DialogTitle>
+                </DialogHeader>
+                <div className="flex-grow overflow-hidden">
+                <iframe
+                  src="https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
+                  className="w-full h-full border-none"
+                  title="Event registration form"
+                >
+                  Loading...
+                </iframe>
+                </div>
+              </DialogContent>
+              </Dialog>
+            </div>
+            </div>
+          </div>
+          </motion.section>
+
+        <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto">
       <motion.section
         className="w-full py-12 sm:py-20"
         initial="initial"
@@ -271,7 +316,7 @@ export default function Home() {
                   </div>
                   <p className="mt-4 text-gray-600 dark:text-gray-300">{event.description}</p>
                   </CardContent>
-                  <CardFooter className="flex justify-between mt-auto gap-4 pt-6">
+                  <CardFooter className="flex justify-end mt-auto gap-4 pt-6">
                   <Dialog>
                     <DialogTrigger asChild>
                     <Button 
@@ -315,31 +360,6 @@ export default function Home() {
                       </div>
                     </DialogContent>
                   </Dialog>
-                  <Button 
-                    className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300"
-                  >
-                    <Dialog>
-                      <DialogTrigger asChild>
-                        <Link href="#">
-                          Register
-                        </Link>
-                      </DialogTrigger>
-                      <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
-                        <DialogHeader className="p-6 bg-gradient-to-r from-violet-700 to-purple-700 dark:from-violet-800 dark:to-purple-800 text-white">
-                          <DialogTitle>Register for {event.title}</DialogTitle>
-                        </DialogHeader>
-                        <div className="flex-grow overflow-hidden">
-                          <iframe
-                            src={event.registrationLink}
-                            className="w-full h-full border-none"
-                            title={`Registration form for {event.title}`}
-                          >
-                            Loading…
-                          </iframe>
-                        </div>
-                      </DialogContent>
-                    </Dialog>
-                  </Button>
                   </CardFooter>
                 </Card>
                 </motion.div>
