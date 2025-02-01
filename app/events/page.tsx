@@ -123,12 +123,12 @@ export default function Events() {
           animate="animate"
           variants={fadeInUp}
         >
-            <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
-            <span className="text-white">CISB</span>
-            <span className="text-yellow-400">O</span>
-            <span className="text-white">SIUM</span>
-            <span className="text-violet-200"> 2025 Events</span>
-            </h1>
+          <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
+          <span className="text-white">CISB</span>
+          <span className="text-yellow-400">O</span>
+          <span className="text-white">SIUM</span>
+          <span className="text-violet-200"> 2025 Events</span>
+          </h1>
           
           <div className="flex justify-center gap-8 flex-wrap mb-12">
             <div className="flex items-center gap-2">
@@ -218,9 +218,10 @@ export default function Events() {
                     <Image
                       src={event.image}
                       alt={event.title}
-                      width={300}
-                      height={200}
-                      className="w-full h-48 object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02] relative"
+                      width={500}
+                      height={300}
+                      className="w-full h-48 object-contain rounded-lg transition-transform duration-300 group-hover:scale-[1.02] relative"
+                      style={{ aspectRatio: '5/3' }}
                     />
                   </div>
                   <p className="mt-4 text-gray-600 dark:text-gray-300">{event.description}</p>
@@ -252,8 +253,9 @@ export default function Events() {
                             alt={event.title}
                             layout="responsive"
                             width={700}
-                            height={475}
-                            className="w-full h-auto object-cover rounded-lg transition-transform duration-300 group-hover:scale-[1.02] relative"
+                            height={300}
+                            className="w-full h-auto object-contain rounded-lg transition-transform duration-300 group-hover:scale-[1.02] relative"
+                            style={{ aspectRatio: '5/3' }}
                           />
                         </div>
                         <p className="text-sm text-violet-600 dark:text-violet-400 flex items-center gap-2 mb-4">
