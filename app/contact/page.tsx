@@ -53,7 +53,7 @@ export default function Contact() {
                 </div>
                 <div className="space-y-2">
                 <h3 className="font-medium text-violet-700 dark:text-violet-300"></h3>
-                <p className="text-gray-600 dark:text-gray-300">Kavindar: <Link href="tel:+91 81481 80104" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">+91 98765 43211</Link></p>
+                <p className="text-gray-600 dark:text-gray-300"> Siva: <Link href="tel:+91 93606 61755" className="text-violet-600 dark:text-violet-400 hover:text-violet-700 dark:hover:text-violet-300">+91 98765 43211</Link></p>
                 </div>
             </div>
           </Card>
