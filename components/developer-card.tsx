@@ -1,6 +1,7 @@
 'use client'
 import { motion } from 'framer-motion'
 import { useState } from 'react'
+import Image from "next/image"
 
 export default function RegisterNowCard() {
   const [isExpanded, setIsExpanded] = useState(false)
@@ -26,12 +27,14 @@ export default function RegisterNowCard() {
               </h2>
               <p className="text-gray-600 dark:text-gray-300">
                 Embark on an exciting journey of innovation, learning, and competition.
-                Here you'll find all the details you need before you register.
+                Here you&apos;ll find all the details you need before you register.
               </p>
             </div>
             <div className="flex justify-center">
-              <img 
+              <Image 
                 src="/img1.jpg"
+                width={160}
+                height={160}
                 className="w-40 h-40 rounded-full ring-2 ring-primary" 
                 alt="Event Logo"
               />
