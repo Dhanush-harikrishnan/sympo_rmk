@@ -550,8 +550,8 @@ export default function Home() {
             <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Shreegan : +91 88259 20804 </p>
-                <p>Siva     : +91 93606 61755 </p>
+                <p>Mr. Sheegan Sri G M : +91 88259 20804 </p>
+                <p>Mr. SIVA R : +91 93606 61755 </p>
               </div>
             </div>
           </div>

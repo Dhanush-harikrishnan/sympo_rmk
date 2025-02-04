@@ -13,6 +13,7 @@ const fadeInUp = {
   transition: { duration: 0.6 }
 }
 
+
 const events = [
   {
     title: "Research Guru",
