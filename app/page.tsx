@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { ArrowRight, CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock, Linkedin } from 'lucide-react'
+import { ArrowRight, CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
