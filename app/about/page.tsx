@@ -37,7 +37,7 @@ const features = [
   {
     icon: <ShieldCheck className="w-6 h-6" />, 
     title: "Professional Societies", 
-    description: "13 student clubs and industry-recognized associations."
+    description: "15 student clubs and industry-recognized associations."
   }
 ]
 

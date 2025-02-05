@@ -26,13 +26,13 @@ const Footer = () => {
                   <Twitter className="h-5 w-5 text-white" />
                 </div>
               </a>
-              <a href="#" className="transform hover:scale-110 transition-transform duration-200">
+              <a href="https://www.instagram.com/cisbosium_25?igsh=N3FsaHJqaWQ5NTJ0" className="transform hover:scale-110 transition-transform duration-200">
                 <span className="sr-only">Instagram</span>
                 <div className="p-2 rounded-lg bg-gradient-to-br from-pink-500 via-purple-500 to-orange-400">
                   <Instagram className="h-5 w-5 text-white" />
                 </div>
               </a>
-              <a href="#" className="transform hover:scale-110 transition-transform duration-200">
+              <a href="https://www.linkedin.com/in/rmkec-csbs-5a4471220/" className="transform hover:scale-110 transition-transform duration-200">
                 <span className="sr-only">LinkedIn</span>
                 <div className="p-2 rounded-lg bg-gradient-to-br from-blue-600 to-blue-700">
                   <Linkedin className="h-5 w-5 text-white" />
@@ -58,10 +58,9 @@ const Footer = () => {
           <div className="mt-8 md:mt-0">
             <h3 className="text-sm font-semibold tracking-wider uppercase mb-4 text-gray-200">Contact Us</h3>
             <address className="not-italic space-y-2 text-gray-300">
-              <p>206, Taluk, Gummidipoondi, Kavaraipettai,</p>
-              <p>Tamil Nadu 601206</p>
+              <p>R.S.M Nagar, Kavaraipettai, Gummidipoondi,</p>
+              <p>Tamil Nadu 601 206</p>
               <p className="mt-4">Email: info@csbssymposium.com</p>
-              <p>Phone: +91 123 456 7890</p>
             </address>
           </div>
         </div>

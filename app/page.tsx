@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { ArrowRight, CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock } from 'lucide-react'
+import { ArrowRight, CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock, Linkedin } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -181,7 +181,15 @@ export default function Home() {
           <div className="flex flex-col md:flex-row items-center justify-between gap-8 lg:gap-12">
             <motion.div className="w-full md:w-1/2 max-w-2xl" variants={fadeInLeft}>
               <h1 className="text-4xl sm:text-5xl font-bold mb-6 bg-gradient-to-r from-white via-purple-200 to-violet-200 bg-clip-text text-transparent">
-                CSBS Symposium 2025
+              <h1 className="text-4xl sm:text-5xl font-bold mb-6 text-center">
+              <span className="text-yellow-400">C</span>
+          <span className="text-white">i</span>
+          <span className="text-yellow-400">SB</span>
+          <span className="text-white">o</span>
+          <span className="text-yellow-400">S</span>
+          <span className="text-white">ium</span>
+          <span className="text-violet-200"> 2025 Events</span>
+          </h1>
               </h1>
               <p className="text-lg sm:text-xl mb-8 text-violet-200">Empowering Innovation and Business Acumen</p>
               <Button asChild className="bg-white hover:bg-violet-100 text-violet-900 font-semibold transition-all duration-300 hover:scale-105">
@@ -218,7 +226,7 @@ export default function Home() {
             <CalendarDays className="h-4 w-4 text-violet-700 dark:text-violet-300" />
             <AlertTitle className="text-violet-800 dark:text-violet-200">Registration Deadline</AlertTitle>
             <AlertDescription className="text-gray-600 dark:text-gray-300">
-              Online registration closes on March 17, 2025. On-spot registration will not be available.
+              Online registration closes on March 06, 2025. On-spot registration will not be available.
             </AlertDescription>
           </Alert>
         </div>
@@ -249,8 +257,8 @@ export default function Home() {
               <Image
                 src="/img1.jpg"
                 alt="Symposium"
-                width={700}
-                height={900}
+                width={1000}
+                height={1500}
                 className="w-full h-auto object-contain rounded-lg relative z-10"
                 sizes="(max-width: 768px) 100vw, 50vw"
               />
@@ -260,45 +268,34 @@ export default function Home() {
       </motion.section>
 
       <motion.section
-        className="w-full py-8 relative z-20"
-        initial="initial"
-        whileInView="animate"
-        viewport={{ once: true }}
-        variants={fadeInUp}
+  className="w-full py-8 relative z-20"
+  initial="initial"
+  whileInView="animate"
+  viewport={{ once: true }}
+  variants={fadeInUp}
+>
+  <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
+    <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 rounded-lg p-8 text-center">
+      <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-800 dark:text-violet-200">
+        Register Now for CISBOSIUM 2025!
+      </h2>
+      <p className="text-gray-600 dark:text-gray-300 mb-6">
+        Join us for an exciting journey of innovation, learning, and competition. 
+        Register now to participate in any of our events and showcase your talents!
+      </p>
+      <Button asChild className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300">
+        <Link 
+          href="https://docs.google.com/forms/d/e/1FAIpQLSdd9CCQ1OMd3Nf90vifE5UJro177AgZGBWAKlkqJHomY5r8gg/viewform"
+          target="_blank"
+          rel="noopener noreferrer"
         >
-        <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 rounded-lg p-8 text-center">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-4 text-violet-800 dark:text-violet-200">
-            Register Now for CISBOSIUM 2025!
-          </h2>
-          <p className="text-gray-600 dark:text-gray-300 mb-6">
-            Join us for an exciting journey of innovation, learning, and competition. 
-            Register now to participate in any of our events and showcase your talents!
-          </p>
-          <Dialog>
-            <DialogTrigger asChild>
-            <Button className="bg-violet-700 hover:bg-violet-800 dark:bg-violet-600 dark:hover:bg-violet-700 text-white shadow-lg hover:shadow-violet-300/50 dark:hover:shadow-violet-900/50 transition-all duration-300">
-              Register for Events
-            </Button>
-            </DialogTrigger>
-            <DialogContent className="sm:max-w-[900px] w-[95vw] h-[95vh] max-h-[95vh] p-0 flex flex-col">
-            <DialogHeader className="p-6 bg-gradient-to-r from-violet-700 to-purple-700 dark:from-violet-800 dark:to-purple-800 text-white">
-              <DialogTitle>Register for CISBOSIUM 2025</DialogTitle>
-            </DialogHeader>
-            <div className="flex-grow overflow-hidden">
-              <iframe
-              src="https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
-              className="w-full h-full border-none"
-              title="Event registration form"
-              >
-              Loading...
-              </iframe>
-            </div>
-            </DialogContent>
-          </Dialog>
-          </div>
-        </div>
-        </motion.section>
+          Register for Events
+        </Link>
+      </Button>
+    </div>
+  </div>
+</motion.section>
+
 
       <div className="flex flex-col min-h-screen max-w-[1920px] mx-auto">
       <motion.section
@@ -435,8 +432,12 @@ export default function Home() {
                   <span>Inauguration Ceremony</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>10:00 AM - 12:00 PM</span>
-                  <span>Events - Round 1</span>
+                  <span>10:00 AM - 11:00 PM</span>
+                  <span>Events - BugCod </span>
+                </li>
+                <li className="flex justify-between">
+                  <span>11:00 AM - 12:00 PM</span>
+                  <span>Events - Shark Tank </span>
                 </li>
               </ul>
             </Card>
@@ -444,16 +445,20 @@ export default function Home() {
               <h3 className="text-xl font-semibold mb-4">Afternoon Session</h3>
               <ul className="space-y-4">
                 <li className="flex justify-between">
-                  <span>12:00 PM - 1:00 PM</span>
+                  <span>12:00 PM - 12:30 PM</span>
                   <span>Lunch</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>1:00 PM - 2:30 PM</span>
-                  <span>Events - Final Round</span>
+                  <span>12:30 PM - 1:30 PM</span>
+                  <span>Events - Research  Guru</span>
                 </li>
                 <li className="flex justify-between">
-                  <span>2:00 PM - 3:00 PM</span>
-                  <span>Prize Distribution</span>
+                  <span>1:30 PM - 2:30 PM</span>
+                  <span>Events - Think Hack</span>
+                </li>
+                <li className="flex justify-between">
+                  <span>2:30 PM - 3:00 PM</span>
+                  <span>Valedictory Ceremony</span>
                 </li>
               </ul>
             </Card>
