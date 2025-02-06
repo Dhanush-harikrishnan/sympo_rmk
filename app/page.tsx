@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { ArrowRight, CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock } from 'lucide-react'
+import { ArrowRight, CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock, Linkedin } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -42,7 +42,7 @@ const events = [
     image: "/rs.png",
     coordinators: "Varshaa, Aswin and Partha",
     icon: "GraduationCap",
-    details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
+    details: "Craft your groundbreaking research into a compelling paper and showcase your clarity, creativity, and thought leadership. Research Guru invites students from diverse fields to present their innovative ideas and research without any domain restrictions.",
     rules: [
       "Abstract submissions are mandatory before the deadline.",
       "Papers must follow the IEEE format.",

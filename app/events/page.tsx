@@ -19,7 +19,7 @@ const events = [
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
     image: "/rs.png",
     coordinators: "Varshaa, Aswin and Partha",
-    details: "Showcase your research and innovative ideas in this paper presentation event. Topics can range from AI and machine learning to business analytics and information systems.",
+    details: "Craft your groundbreaking research into a compelling paper and showcase your clarity, creativity, and thought leadership. Research Guru invites students from diverse fields to present their innovative ideas and research without any domain restrictions.",
     rules: [
       "Abstract submissions are mandatory before the deadline.",
       "Papers must follow the IEEE format.",
