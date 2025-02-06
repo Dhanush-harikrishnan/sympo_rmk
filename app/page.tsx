@@ -55,7 +55,7 @@ const events = [
   {
     title: "Shark Tank",
     description: "Pitch your innovative business ideas to a panel of industry experts.",
-    image: "/shark_tank.jpg",
+    image: "/shark_tank.png",
     coordinators: "Harini and Keerthana",
     icon: "Presentation",
     details: "Get a chance to present your business ideas to a panel of successful entrepreneurs and investors. Receive valuable feedback and potentially secure funding for your startup.",
