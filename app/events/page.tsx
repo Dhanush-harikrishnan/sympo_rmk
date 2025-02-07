@@ -199,9 +199,6 @@ export default function Events() {
                 <CardHeader>
                   <CardTitle className="text-violet-800 dark:text-violet-200 flex items-center justify-between">
                     {event.title}
-                    <span className="p-2 rounded-full bg-violet-100 dark:bg-violet-900/50 text-violet-600 dark:text-violet-300 group-hover:bg-violet-200 dark:group-hover:bg-violet-800/50 transition-colors">
-                      <ArrowRight className="w-4 h-4" />
-                    </span>
                   </CardTitle>
                   <CardDescription className="flex items-center gap-2 text-violet-600 dark:text-violet-400">
                     <Users className="w-4 h-4" />
