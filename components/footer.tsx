@@ -1,5 +1,5 @@
 import Link from "next/link"
-import { Facebook, Twitter, Instagram, Linkedin } from 'lucide-react'
+import { Instagram, Linkedin } from 'lucide-react'
 
 const Footer = () => {
   return (
@@ -14,18 +14,6 @@ const Footer = () => {
               Empowering Innovation and Business Acumen
             </p>
             <div className="flex space-x-6">
-              <a href="#" className="transform hover:scale-110 transition-transform duration-200">
-                <span className="sr-only">Facebook</span>
-                <div className="p-2 rounded-lg bg-gradient-to-br from-blue-500 to-blue-600">
-                  <Facebook className="h-5 w-5 text-white" />
-                </div>
-              </a>
-              <a href="#" className="transform hover:scale-110 transition-transform duration-200">
-                <span className="sr-only">Twitter</span>
-                <div className="p-2 rounded-lg bg-gradient-to-br from-sky-400 to-sky-500">
-                  <Twitter className="h-5 w-5 text-white" />
-                </div>
-              </a>
               <a href="https://www.instagram.com/cisbosium_25?igsh=N3FsaHJqaWQ5NTJ0" className="transform hover:scale-110 transition-transform duration-200">
                 <span className="sr-only">Instagram</span>
                 <div className="p-2 rounded-lg bg-gradient-to-br from-pink-500 via-purple-500 to-orange-400">

@@ -72,7 +72,7 @@ const events = [
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
     image: "/buc.png",
-    coordinators: "Sheegan Sri and Prasath",
+    coordinators: "Sheegan Sri, Prasath and Niktha Sahin",
     icon: "Code",
     details: "Demonstrate your programming prowess in this coding competition. Face challenging problems and debug complex code to prove your skills in various programming languages.",
     rules: [
@@ -88,7 +88,7 @@ const events = [
     title: "Think Hack",
     description: "Solve complex problems using AI and machine learning techniques.",
     image: "/th.png",
-    coordinators: "Siva and Sharvesh Guru",
+    coordinators: "Siva, Sharvesh Guru, Nivetha",
     icon: "BrainCircuit",
     details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
     rules: [
@@ -101,7 +101,7 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Stock Market Challenge Meme War",
+    title: "Stock Market Challenge",
     description: "Test your financial acumen in a simulated stock market environment.",
     image: "/vwsc.jpg",
     coordinators: "Kavindar ,Venkat Sai and Hari",
@@ -120,7 +120,7 @@ const events = [
     title: "MystIO",
     description: "Unravel cryptic clues and uncover a hidden secret!",
     image: "/m.jpg",
-    coordinators: "Sarvesh and joilin",
+    coordinators: "Sarvesh, joilin, Rithu Varshini",
     details: "Solve puzzles and decipher messages in this thrilling adventure. Put your detective skills to the test!",
     rules: [
       "Participants must register before the event.",

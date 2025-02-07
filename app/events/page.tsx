@@ -75,7 +75,7 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "Stock Market Challenge Meme War",
+    title: "Stock Market Challenge",
     description: "Test your financial acumen in a simulated stock market environment.",
     image: "/vwsc.jpg",
     coordinators: "Kavindar ,Venkat Sai and Hari",
