@@ -19,6 +19,7 @@ const events = [
     description: "Present your research papers on cutting-edge topics in computer science and business systems.",
     image: "/rs.png",
     coordinators: "Varshaa, Aswin and Partha",
+    icon: "GraduationCap",
     details: "Craft your groundbreaking research into a compelling paper and showcase your clarity, creativity, and thought leadership. Research Guru invites students from diverse fields to present their innovative ideas and research without any domain restrictions.",
     rules: [
       "Abstract submissions are mandatory before the deadline.",
@@ -34,6 +35,7 @@ const events = [
     description: "Pitch your innovative business ideas to a panel of industry experts.",
     image: "/shark_tank.png",
     coordinators: "Harini and Keerthana",
+    icon: "Presentation",
     details: "Get a chance to present your business ideas to a panel of successful entrepreneurs and investors. Receive valuable feedback and potentially secure funding for your startup.",
     rules: [
       "Teams of 1-4 members allowed.",
@@ -48,7 +50,8 @@ const events = [
     title: "Coding and Debugging",
     description: "Showcase your coding skills and debug challenging programs.",
     image: "/buc.png",
-    coordinators: "Sheegan Sri and Prasath",
+    coordinators: "Sheegan Sri, Prasath and Niktha Sahin",
+    icon: "Code",
     details: "Demonstrate your programming prowess in this coding competition. Face challenging problems and debug complex code to prove your skills in various programming languages.",
     rules: [
       "Solo or duo participation allowed.",
@@ -63,7 +66,8 @@ const events = [
     title: "Think Hack",
     description: "Solve complex problems using AI and machine learning techniques.",
     image: "/th.png",
-    coordinators: "Siva and Sharvesh Guru",
+    coordinators: "Siva, Sharvesh Guru, Nivetha",
+    icon: "BrainCircuit",
     details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
     rules: [
       "Teams of 1-3 members allowed.",
@@ -79,6 +83,7 @@ const events = [
     description: "Test your financial acumen in a simulated stock market environment.",
     image: "/vwsc.jpg",
     coordinators: "Kavindar ,Venkat Sai and Hari",
+    icon: "Coins",
     details: "Experience the thrill of stock trading in a risk-free environment. Make investment decisions, analyze market trends, and compete to build the most profitable portfolio.",
     rules: [
       "Solo or duo participation allowed.",
@@ -93,7 +98,7 @@ const events = [
     title: "MystIO",
     description: "Unravel cryptic clues and uncover a hidden secret!",
     image: "/m.jpg",
-    coordinators: "Sarvesh and joilin",
+    coordinators: "Sarvesh, joilin, Rithu Varshini",
     details: "Solve puzzles and decipher messages in this thrilling adventure. Put your detective skills to the test!",
     rules: [
       "Participants must register before the event.",
