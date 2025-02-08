@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Trophy, Users, Calendar, ArrowRight } from 'lucide-react'
+import { Trophy, Users, Calendar } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
