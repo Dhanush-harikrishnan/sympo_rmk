@@ -5,7 +5,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Dialog, DialogContent, DialogDescription, DialogHeader, DialogTitle, DialogTrigger } from "@/components/ui/dialog"
-import { Trophy, Users, Calendar} from 'lucide-react'
+import { Trophy, Users, Calendar } from 'lucide-react'
 
 const fadeInUp = {
   initial: { opacity: 0, y: 60 },
@@ -34,7 +34,7 @@ const events = [
     title: "Shark Tank",
     description: "Pitch your innovative business ideas to a panel of industry experts.",
     image: "/shark_tank.png",
-    coordinators: "Harini and Keerthana",
+    coordinators: "Harini, Yuvasri and Keerthana",
     icon: "Presentation",
     details: "Get a chance to present your business ideas to a panel of successful entrepreneurs and investors. Receive valuable feedback and potentially secure funding for your startup.",
     rules: [
@@ -64,11 +64,19 @@ const events = [
   },
   {
     title: "Think Hack",
+<<<<<<< HEAD
     description: "Crack the code, race the clock—to seize the Ultimate Innovator title!.",
     image: "/th.png",
     coordinators: "Siva, Sharvesh Guru, Nivetha",
     icon: "BrainCircuit",
     details: "Put your skills to the test in this high-energy hackathon!  Compete, create, and showcase your problem-solving abilities in an unforgettable experience.",
+=======
+    description: "Crack the code, race the clock—to seize the Ultimate Innovator title!",
+    image: "/th.png",
+    coordinators: "Siva, Sharvesh Guru, Nivetha",
+    icon: "BrainCircuit",
+    details: "Put your skills to the test in this high-energy hackathon!  Compete, create, and showcase your problem-solving abilities in an unforgettable experience.",
+>>>>>>> ef54d278f9c5e634ea69e75d6caa855a9896a044
     rules: [
       "Teams of 1-3 members allowed.",
       "Participants should bring their own laptops.",
