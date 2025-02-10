@@ -200,7 +200,7 @@ export default function Home() {
               <div className="relative group">
                 <div className="absolute -inset-4 bg-gradient-to-r from-violet-500 via-purple-500 to-indigo-500 rounded-lg opacity-30 blur-2xl group-hover:opacity-40 transition-opacity duration-300" />
                 <Image
-                  src="/Banner.jpg"
+                  src="/Banner.png"
                   alt="Symposium Banner"
                   layout="responsive"
                   width={700}
@@ -596,7 +596,7 @@ export default function Home() {
                   </Button>
                   <Button asChild variant="outline">
                     <Link 
-                      href="tel:+91 88259 20804"
+                      href="/contact"
                     >
                       Contact
                     </Link>
