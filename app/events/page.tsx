@@ -64,19 +64,11 @@ const events = [
   },
   {
     title: "Think Hack",
-<<<<<<< HEAD
     description: "Crack the code, race the clock—to seize the Ultimate Innovator title!.",
     image: "/th.png",
     coordinators: "Siva, Sharvesh Guru, Nivetha",
     icon: "BrainCircuit",
     details: "Put your skills to the test in this high-energy hackathon!  Compete, create, and showcase your problem-solving abilities in an unforgettable experience.",
-=======
-    description: "Crack the code, race the clock—to seize the Ultimate Innovator title!",
-    image: "/th.png",
-    coordinators: "Siva, Sharvesh Guru, Nivetha",
-    icon: "BrainCircuit",
-    details: "Put your skills to the test in this high-energy hackathon!  Compete, create, and showcase your problem-solving abilities in an unforgettable experience.",
->>>>>>> ef54d278f9c5e634ea69e75d6caa855a9896a044
     rules: [
       "Teams of 1-3 members allowed.",
       "Participants should bring their own laptops.",
