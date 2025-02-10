@@ -7,7 +7,7 @@ import { motion } from "framer-motion"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card"
 import { Alert, AlertDescription, AlertTitle } from "@/components/ui/alert"
-import { CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock } from 'lucide-react'
+import { ArrowRight, CalendarDays, Users, GraduationCap, Presentation, Code, BrainCircuit, Coins, Lock } from 'lucide-react'
 import {
   Dialog,
   DialogContent,
@@ -86,11 +86,11 @@ const events = [
   },
   {
     title: "Think Hack",
-    description: "Solve complex problems using AI and machine learning techniques.",
+    description: "Crack the code, race the clock—to seize the Ultimate Innovator title!.",
     image: "/th.png",
     coordinators: "Siva, Sharvesh Guru, Nivetha",
     icon: "BrainCircuit",
-    details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
+    details: "Put your skills to the test in this high-energy hackathon!  Compete, create, and showcase your problem-solving abilities in an unforgettable experience.",
     rules: [
       "Teams of 1-3 members allowed.",
       "Participants should bring their own laptops.",
@@ -117,7 +117,7 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "MystIO",
+    title: "MystIQ",
     description: "Unravel cryptic clues and uncover a hidden secret!",
     image: "/m.jpg",
     coordinators: "Sarvesh, joilin, Rithu Varshini",
@@ -553,8 +553,8 @@ export default function Home() {
             <div className="bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 p-6 rounded-lg">
               <h3 className="text-lg font-semibold mb-4 text-violet-700">Student Coordinators</h3>
               <div className="space-y-2 text-gray-600">
-                <p>Mr. Sheegan Sri G M : +91 88259 20804 </p>
-                <p>Mr. SIVA R : +91 93606 61755 </p>
+                <p>Mr. Sheegan Sri G M </p>
+                <p>Mr. SIVA R </p>
               </div>
             </div>
           </div>
@@ -624,4 +624,3 @@ export default function Home() {
     </div>
   )
 }
-

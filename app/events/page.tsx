@@ -64,11 +64,11 @@ const events = [
   },
   {
     title: "Think Hack",
-    description: "Solve complex problems using AI and machine learning techniques.",
+    description: "Crack the code, race the clock—to seize the Ultimate Innovator title!.",
     image: "/th.png",
     coordinators: "Siva, Sharvesh Guru, Nivetha",
     icon: "BrainCircuit",
-    details: "Put your AI and machine learning skills to the test in this intensive hackathon. Work on real-world problems and develop innovative solutions using cutting-edge technologies.",
+    details: "Put your skills to the test in this high-energy hackathon!  Compete, create, and showcase your problem-solving abilities in an unforgettable experience.",
     rules: [
       "Teams of 1-3 members allowed.",
       "Participants should bring their own laptops.",
@@ -95,7 +95,7 @@ const events = [
     registrationLink: "https://docs.google.com/forms/d/e/1FAIpQLSe-JlAhu5uAHSqg4kORVPhGeOe8M2_8X6_Fd40YftGZfbKIfQ/viewform?usp=header"
   },
   {
-    title: "MystIO",
+    title: "MystIQ",
     description: "Unravel cryptic clues and uncover a hidden secret!",
     image: "/m.jpg",
     coordinators: "Sarvesh, joilin, Rithu Varshini",
