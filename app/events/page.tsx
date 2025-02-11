@@ -34,7 +34,7 @@ const events = [
     title: "Shark Tank",
     description: "Pitch your innovative business ideas to a panel of industry experts.",
     image: "/shark_tank.png",
-    coordinators: "Harini, Yuvasri and Keerthana",
+    coordinators: "Harini, Keerthana and Yuvasri",
     icon: "Presentation",
     details: "Get a chance to present your business ideas to a panel of successful entrepreneurs and investors. Receive valuable feedback and potentially secure funding for your startup.",
     rules: [
