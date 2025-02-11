@@ -2,13 +2,14 @@
 import { motion } from 'framer-motion'
 import { useState } from 'react'
 import Image from "next/image"
+import { X } from 'lucide-react'
 
 export default function RegisterNowCard() {
   const [isExpanded, setIsExpanded] = useState(false)
 
   return (
     <motion.div
-      className="fixed bottom-4 right-4 z-50 cursor-pointer"
+      className="fixed bottom-4 right-4 z-50"
       animate={{
         rotate: isExpanded ? 0 : 360,
         width: isExpanded ? '90vw' : 80,
@@ -16,19 +17,27 @@ export default function RegisterNowCard() {
         borderRadius: isExpanded ? '1rem' : '50%'
       }}
       transition={{ type: 'spring', stiffness: 100 }}
-      onClick={() => setIsExpanded(!isExpanded)}
     >
       <div className="relative h-full w-full overflow-hidden bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm shadow-lg ring-2 ring-violet-200 dark:ring-violet-800">
         {isExpanded ? (
           <div className="p-4 h-full flex flex-col space-y-4">
-            <div className="text-center">
-              <h2 className="text-2xl sm:text-3xl font-bold text-violet-800 dark:text-violet-200">
-                Welcome to CISBOSIUM 2025!
-              </h2>
-              <p className="text-gray-600 dark:text-gray-300">
-                Embark on an exciting journey of innovation, learning, and competition.
-                Here you&apos;ll find all the details you need before you register.
-              </p>
+            <div className="flex justify-between items-start">
+              <div className="text-center flex-1">
+                <h2 className="text-2xl sm:text-3xl font-bold text-violet-800 dark:text-violet-200">
+                  Welcome to CISBOSIUM 2025!
+                </h2>
+                <p className="text-gray-600 dark:text-gray-300">
+                  Embark on an exciting journey of innovation, learning, and competition.
+                  Here you&apos;ll find all the details you need before you register.
+                </p>
+              </div>
+              <button 
+                onClick={() => setIsExpanded(false)}
+                className="p-2 hover:bg-violet-100 dark:hover:bg-violet-900/50 rounded-full transition-colors"
+                aria-label="Close"
+              >
+                <X className="w-6 h-6 text-violet-800 dark:text-violet-200" />
+              </button>
             </div>
             <div className="flex justify-center">
               <Image 
@@ -108,7 +117,10 @@ export default function RegisterNowCard() {
             </div>
           </div>
         ) : (
-          <div className="flex items-center justify-center h-full">
+          <div 
+            className="flex items-center justify-center h-full cursor-pointer"
+            onClick={() => setIsExpanded(true)}
+          >
             <span className="text-lg">🎉</span>
           </div>
         )}

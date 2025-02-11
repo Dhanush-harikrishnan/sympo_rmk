@@ -38,7 +38,7 @@ const fadeInRight = {
 const events = [
   {
     title: "Research Guru",
-    description: "Present your research papers on cutting-edge topics in computer science and business systems.",
+    description: "Unleash your research potential and showcase innovative ideas.",
     image: "/rs.png",
     coordinators: "Varshaa, Aswin and Partha",
     icon: "GraduationCap",
@@ -306,7 +306,7 @@ export default function Home() {
         variants={fadeInUp}
       >
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-2xl sm:text-3xl font-bold mb-8 sm:mb-12 text-center text-violet-700">Featured Events</h2>
+          <h2 className="text-2xl sm:text-3xl font-bold mb-8 text-center text-violet-700">Featured Events</h2>
           <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8 items-stretch">
             {events.map((event, index) => (
                 <motion.div
@@ -414,61 +414,71 @@ export default function Home() {
 
         <motion.section className="w-full py-12 sm:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
-          Event Schedule
-          </h2>
+          <motion.h2 
+            className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200"
+            variants={fadeInUp}
+          >
+            Event Schedule
+          </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
-          <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
-              <h3 className="text-xl font-semibold mb-4">Morning Session</h3>
-              <ul className="space-y-4">
-                <li className="flex justify-between">
-                  <span>8:30 AM - 9:00 AM</span>
-                  <span>Registration & Kit Distribution</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>9:00 AM - 10:00 AM</span>
-                  <span>Inauguration Ceremony</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>10:00 AM - 11:00 PM</span>
-                  <span>Events - BugCod </span>
-                </li>
-                <li className="flex justify-between">
-                  <span>11:00 AM - 12:00 PM</span>
-                  <span>Events - Shark Tank </span>
-                </li>
-              </ul>
-            </Card>
-            <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
-              <h3 className="text-xl font-semibold mb-4">Afternoon Session</h3>
-              <ul className="space-y-4">
-                <li className="flex justify-between">
-                  <span>12:00 PM - 12:30 PM</span>
-                  <span>Lunch</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>12:30 PM - 1:30 PM</span>
-                  <span>Events - Research  Guru</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>1:30 PM - 2:30 PM</span>
-                  <span>Events - Think Hack</span>
-                </li>
-                <li className="flex justify-between">
-                  <span>2:30 PM - 3:00 PM</span>
-                  <span>Valedictory Ceremony</span>
-                </li>
-              </ul>
-            </Card>
+            <motion.div variants={fadeInUp}>
+              <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-violet-400 dark:hover:border-violet-600">
+                <h3 className="text-xl font-semibold mb-4">Morning Session</h3>
+                <ul className="space-y-4">
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">8:30 AM - 9:00 AM</span>
+                    <span>Registration & Kit Distribution</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">9:00 AM - 10:00 AM</span>
+                    <span>Inauguration Ceremony</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">10:00 AM - 11:00 PM</span>
+                    <span>Events - BugCod </span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">11:00 AM - 12:00 PM</span>
+                    <span>Events - Shark Tank </span>
+                  </li>
+                </ul>
+              </Card>
+            </motion.div>
+            <motion.div variants={fadeInUp}>
+              <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900 transform transition-all duration-300 hover:scale-[1.02] hover:shadow-xl hover:border-violet-400 dark:hover:border-violet-600">
+                <h3 className="text-xl font-semibold mb-4">Afternoon Session</h3>
+                <ul className="space-y-4">
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">12:00 PM - 12:30 PM</span>
+                    <span>Lunch</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">12:30 PM - 1:30 PM</span>
+                    <span>Events - Research  Guru</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">1:30 PM - 2:30 PM</span>
+                    <span>Events - Think Hack</span>
+                  </li>
+                  <li className="flex flex-col sm:flex-row sm:justify-between gap-1">
+                    <span className="font-medium text-violet-700 dark:text-violet-300">2:30 PM - 3:00 PM</span>
+                    <span>Valedictory Ceremony</span>
+                  </li>
+                </ul>
+              </Card>
+            </motion.div>
           </div>
         </div>
       </motion.section>
 
       <motion.section className="w-full py-12 sm:py-20">
   <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-    <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
+    <motion.h2 
+      className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200"
+      variants={fadeInUp}
+    >
       Exciting Prizes, Rewards & Certificates Await!
-    </h2>
+    </motion.h2>
     <Card className="text-center p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
       <h3 className="text-xl font-semibold mb-4">Win Big!</h3>
       <p className="text-3xl font-bold text-violet-700 mb-4">Cash Prizes & Prestigious Certificates</p>
@@ -481,9 +491,12 @@ export default function Home() {
 
         <motion.section className="w-full py-12 sm:py-20">
         <div className="container mx-auto px-4 lg:px-8 max-w-7xl">
-          <h2 className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200">
+          <motion.h2 
+            className="text-3xl font-bold mb-12 text-center text-violet-800 dark:text-violet-200"
+            variants={fadeInUp}
+          >
           Important Guidelines
-          </h2>
+          </motion.h2>
           <div className="grid md:grid-cols-2 gap-8">
           <Card className="p-6 bg-white/80 dark:bg-gray-900/80 backdrop-blur-sm border-2 border-violet-100 dark:border-violet-900">
               <h3 className="text-xl font-semibold mb-4">Registration Guidelines</h3>
